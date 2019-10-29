@@ -98,13 +98,8 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 498}
   m_MaxSize: {x: 18008, y: 14048}
   vertical: 0
-<<<<<<< HEAD
   controlID: 144
 --- !u!114 &5
-=======
-  controlID: 10
---- !u!114 &3
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,13 +270,8 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 498}
   m_MaxSize: {x: 14006, y: 14048}
   vertical: 1
-<<<<<<< HEAD
   controlID: 102
 --- !u!114 &12
-=======
-  controlID: 11
---- !u!114 &10
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,13 +295,8 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-<<<<<<< HEAD
   controlID: 103
 --- !u!114 &13
-=======
-  controlID: 12
---- !u!114 &11
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,7 +317,6 @@ MonoBehaviour:
     height: 792
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
-<<<<<<< HEAD
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -371,16 +355,6 @@ MonoBehaviour:
   m_Palette: {fileID: 7202056027596222393, guid: 175666d8299c9462c900455dcd89e1cf,
     type: 3}
 --- !u!114 &15
-=======
-  m_ActualView: {fileID: 17}
-  m_Panes:
-  - {fileID: 16}
-  - {fileID: 17}
-  - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &12
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,7 +418,6 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
@@ -452,28 +425,13 @@ MonoBehaviour:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHubRepos\GameProject\Game
-=======
-    - Assets/Scenes
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Scenes
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/dina/Documents/GitHub/GameProject/Game
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
     m_SelectedIDs: d40c0000
     m_LastClickedID: 3284
     m_ExpandedIDs: 000000006409000000ca9a3b
-=======
-    m_SelectedIDs: b2100000
-    m_LastClickedID: 4274
-    m_ExpandedIDs: 0000000062090000
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,11 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 0000000064090000
-=======
-    m_ExpandedIDs: 0000000062090000
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -624,15 +578,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d6fbffff
-=======
-      m_SelectedIDs: 1c110000
-      m_LastClickedID: 4380
-      m_ExpandedIDs: d4fbffff00110000
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -648,11 +596,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-<<<<<<< HEAD
         m_ClientGUIView: {fileID: 6}
-=======
-        m_ClientGUIView: {fileID: 4}
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -691,15 +635,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
     m_Target: {x: 4.81931, y: 0.39716813, z: -0.23912558}
     speed: 2
     m_Value: {x: 4.81931, y: 0.39716813, z: -0.23912558}
-=======
-    m_Target: {x: -13.78, y: -1.3800001, z: 0}
-    speed: 2
-    m_Value: {x: -13.78, y: -1.3800001, z: 0}
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -731,15 +669,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
     m_Target: 17.753126
     speed: 2
     m_Value: 17.753126
-=======
-    m_Target: 6.4229913
-    speed: 2
-    m_Value: 6.4229913
->>>>>>> c50da40... Merge pull request #13 from lilla021/dina/test_palette
   m_Ortho:
     m_Target: 1
     speed: 2
