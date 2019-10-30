@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     Vector2 movement;                  //Vector2 variable to store the player's movement direction.
     Vector3 currentVelocity = Vector3.zero;
     Vector3 targetVelocity;
+
     bool isJumping = false;
     bool isAttack = false;
     bool isDashing = false;
@@ -20,9 +22,13 @@ public class PlayerController : MonoBehaviour {
     float jumpForce;                   //Floating point variable to store the player's jump force.
     [SerializeField]
     float dashForce;
+
     [SerializeField]
     Transform groundCheck;
     bool isGrounded = false;
+
+    [SerializeField]
+    Image colorCorrection;
 
     private Rigidbody2D player;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -57,6 +63,20 @@ public class PlayerController : MonoBehaviour {
 
         isJumping = Input.GetButtonDown("Jump");
         isDashing = Input.GetButtonDown("Dash");
+
+        if (Input.GetButtonDown("DreamWorld")) {
+            PlayerData.IsInDream = true;
+            colorCorrection.enabled = true;
+        }
+        if (PlayerData.IsInDream) {
+            PlayerData.DreamTimerCurrentValue -= Time.deltaTime;
+
+            if(PlayerData.DreamTimerCurrentValue <= 0) {
+                PlayerData.DreamTimerCurrentValue = PlayerData.DreamTimerMaxValue;
+                PlayerData.IsInDream = false;
+                colorCorrection.enabled = false;
+            }
+        }
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -95,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 
     void Attack()
     {
-        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
+        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && Mathf.Abs(player.velocity.x) <= Mathf.Abs(currentSpeed * Time.deltaTime)) {
             isAttack = Input.GetMouseButtonDown(0) ? true : false;
             mAnimator.SetBool("isAttack", isAttack);
         }
