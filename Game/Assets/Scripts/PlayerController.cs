@@ -11,28 +11,36 @@ public class PlayerController : MonoBehaviour {
     Vector3 currentVelocity = Vector3.zero;
     Vector3 targetVelocity;
     bool isJumping = false;
+    bool isRising;
     [SerializeField]
     float jumpForce;                   //Floating point variable to store the player's jump force.
-
     [SerializeField]
     Transform groundCheck;
     bool isGrounded = false;
 
     private Rigidbody2D player;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
+    Animator mAnimator;
+
     // Use this for initialization
     void Start() {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         player = GetComponent<Rigidbody2D>();
+        mAnimator = GetComponent<Animator>();
     }
 
     void Update() {
         //Store the current horizontal input in the float moveHorizontal.
         moveHorizontal = Input.GetAxisRaw("Horizontal");
-
+        Attack();
         //Flip the sprite when necessary.
         if (moveHorizontal != 0) {
-            transform.localScale = new Vector2(moveHorizontal, 1);
+            transform.localScale = new Vector2(moveHorizontal, 1);           
+            mAnimator.SetBool("isRunning", true);
+        }
+        else
+        {
+            mAnimator.SetBool("isRunning", false);
         }
 
         //Store the current vertical input in the float moveVertical.
@@ -60,8 +68,25 @@ public class PlayerController : MonoBehaviour {
         player.velocity = Vector3.SmoothDamp(player.velocity, targetVelocity, ref currentVelocity, 0.04f);
 
         if (isJumping) {
+            mAnimator.SetBool("isRising", true);
             player.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isJumping = false;
+        }
+        else
+        {
+            mAnimator.SetBool("isRising", false);
+        }
+    }
+
+    void Attack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            mAnimator.SetBool("isAttack", true);
+        }
+        else
+        {
+            mAnimator.SetBool("isAttack", false);
         }
     }
 }
