@@ -54,10 +54,19 @@ public class PlayerController : MonoBehaviour {
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate() {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.1f, LayerMask.GetMask("Ground"));
+        //Debug.Log("I am in");
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.1f, LayerMask.GetMask("Level"));
         for (int i = 0; i < colliders.Length; i++) {
             if (colliders[i].gameObject != gameObject) {
                 isGrounded = true;
+                //Debug.Log(isGrounded);
+                mAnimator.SetBool("isGrounded", true);
+            }
+            else
+            {
+                isGrounded = false;
+                //Debug.Log(isGrounded);
+                mAnimator.SetBool("isGrounded", false);
             }
         }
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.

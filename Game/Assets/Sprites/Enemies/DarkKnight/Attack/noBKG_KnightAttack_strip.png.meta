@@ -1,0 +1,1097 @@
+fileFormatVersion: 2
+guid: 0f3810ab8468eb8499065721ab208f0e
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: noBKG_KnightAttack_strip_0
+    21300002: noBKG_KnightAttack_strip_1
+    21300004: noBKG_KnightAttack_strip_2
+    21300006: noBKG_KnightAttack_strip_3
+    21300008: noBKG_KnightAttack_strip_4
+    21300010: noBKG_KnightAttack_strip_5
+    21300012: noBKG_KnightAttack_strip_6
+    21300014: noBKG_KnightAttack_strip_7
+    21300016: noBKG_KnightAttack_strip_8
+    21300018: noBKG_KnightAttack_strip_9
+    21300020: noBKG_KnightAttack_strip_10
+    21300022: noBKG_KnightAttack_strip_11
+    21300024: noBKG_KnightAttack_strip_12
+    21300026: noBKG_KnightAttack_strip_13
+    21300028: noBKG_KnightAttack_strip_14
+    21300030: noBKG_KnightAttack_strip_15
+    21300032: noBKG_KnightAttack_strip_16
+    21300034: noBKG_KnightAttack_strip_17
+    21300036: noBKG_KnightAttack_strip_18
+    21300038: noBKG_KnightAttack_strip_19
+    21300040: noBKG_KnightAttack_strip_20
+    21300042: noBKG_KnightAttack_strip_21
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 19
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442f3ee52ccbd3b4089b942b5422f43f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_1
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 19
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566640c56b8d38f46833afc98c0e9206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 19
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3744254d12e232a47a0f84da4bc5c3ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_3
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 19
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4adcc1d010406a4ba7ceb813016c371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_4
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 19
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f157d3e59d7d81a4895f1db1959c722d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_5
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 19
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da89518e7db8c1e4f906687d450712ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_6
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 19
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327fe28c607f7d04db4ec74e673dd8a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_7
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 19
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e2e777744d34644a92ace8038525c3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 19
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3173acd51319b944ab2e0fa150cb6615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 19
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72895e6fb5d6f2d4f8869f6bba7b13ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 19
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea989c2e9dcb2c429826bdc45bab5aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 19
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906e3ddafa436fc4cac9757d3606036a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_12
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 19
+        width: 42
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e6939d1a60107428bfb5030c458e2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_13
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 19
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fb406397441d84da79970273a69a3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_14
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 19
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0a4617621ec414dad207b1033fe858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_15
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 19
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba483c238635904ab8ed15be554cd7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_16
+      rect:
+        serializedVersion: 2
+        x: 2374
+        y: 19
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2827eda21b0a442a17e01a68fc736b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_17
+      rect:
+        serializedVersion: 2
+        x: 2529
+        y: 19
+        width: 54
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1f9b25a76497e42919d69c22c58b4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_18
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 19
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809d819fcc0715b4dae5fa5bbf93b431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_19
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 19
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96923757b3869f74b80a819859efa3f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_20
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 19
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ca77e9aa7c61b4385b1b8dfc433502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_KnightAttack_strip_21
+      rect:
+        serializedVersion: 2
+        x: 3106
+        y: 19
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d193c034783618e44bdc14d1c464b261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -1517.4844, y: -16.390244}
+      - {x: -1508.2031, y: -16.390244}
+      - {x: -1505.1094, y: -13.268292}
+      - {x: -1506.6562, y: -3.902439}
+      - {x: -1500.4688, y: 0.7804878}
+      - {x: -1500.4688, y: 11.707317}
+      - {x: -1505.1094, y: 16.390244}
+      - {x: -1509.75, y: 16.390244}
+      - {x: -1509.75, y: 17.95122}
+      - {x: -1514.3906, y: 22.634146}
+      - {x: -1520.5781, y: 22.634146}
+      - {x: -1525.2188, y: 17.95122}
+      - {x: -1525.2188, y: 13.268292}
+      - {x: -1532.9531, y: 5.4634147}
+      - {x: -1532.9531, y: 3.902439}
+      - {x: -1531.4062, y: 2.3414633}
+      - {x: -1531.4062, y: -3.902439}
+      - {x: -1529.8594, y: -5.4634147}
+      - {x: -1532.9531, y: -10.146341}
+      - {x: -1532.9531, y: -13.268292}
+      - {x: -1529.8594, y: -16.390244}
+      - {x: -1525.2188, y: -16.390244}
+      - {x: -1520.5781, y: -11.707317}
+    - - {x: -1373.625, y: -16.390244}
+      - {x: -1364.3438, y: -16.390244}
+      - {x: -1361.25, y: -13.268292}
+      - {x: -1362.7969, y: -3.902439}
+      - {x: -1356.6094, y: 0.7804878}
+      - {x: -1356.6094, y: 11.707317}
+      - {x: -1361.25, y: 16.390244}
+      - {x: -1365.8906, y: 16.390244}
+      - {x: -1365.8906, y: 17.95122}
+      - {x: -1370.5312, y: 22.634146}
+      - {x: -1376.7188, y: 22.634146}
+      - {x: -1381.3594, y: 17.95122}
+      - {x: -1381.3594, y: 13.268292}
+      - {x: -1386, y: 10.146341}
+      - {x: -1387.5469, y: 5.4634147}
+      - {x: -1387.5469, y: -3.902439}
+      - {x: -1386, y: -5.4634147}
+      - {x: -1389.0938, y: -10.146341}
+      - {x: -1389.0938, y: -13.268292}
+      - {x: -1386, y: -16.390244}
+      - {x: -1381.3594, y: -16.390244}
+      - {x: -1376.7188, y: -11.707317}
+    - - {x: -1229.7656, y: -16.390244}
+      - {x: -1220.4844, y: -16.390244}
+      - {x: -1217.3906, y: -13.268292}
+      - {x: -1218.9375, y: -3.902439}
+      - {x: -1212.75, y: 0.7804878}
+      - {x: -1212.75, y: 11.707317}
+      - {x: -1217.3906, y: 16.390244}
+      - {x: -1222.0312, y: 16.390244}
+      - {x: -1222.0312, y: 17.95122}
+      - {x: -1226.6719, y: 22.634146}
+      - {x: -1232.8594, y: 22.634146}
+      - {x: -1237.5, y: 17.95122}
+      - {x: -1237.5, y: 13.268292}
+      - {x: -1242.1406, y: 8.585366}
+      - {x: -1243.6875, y: 2.3414633}
+      - {x: -1242.1406, y: 0.7804878}
+      - {x: -1243.6875, y: -0.7804878}
+      - {x: -1243.6875, y: -3.902439}
+      - {x: -1242.1406, y: -5.4634147}
+      - {x: -1245.2344, y: -10.146341}
+      - {x: -1245.2344, y: -13.268292}
+      - {x: -1242.1406, y: -16.390244}
+      - {x: -1237.5, y: -16.390244}
+      - {x: -1232.8594, y: -11.707317}
+    - - {x: -1078.1719, y: -13.268292}
+      - {x: -1075.0781, y: -8.585366}
+      - {x: -1075.0781, y: -3.902439}
+      - {x: -1071.9844, y: -0.7804878}
+      - {x: -1071.9844, y: 11.707317}
+      - {x: -1082.8125, y: 21.073172}
+      - {x: -1090.5469, y: 21.073172}
+      - {x: -1093.6406, y: 17.95122}
+      - {x: -1093.6406, y: 14.829268}
+      - {x: -1098.2812, y: 10.146341}
+      - {x: -1099.8281, y: 3.902439}
+      - {x: -1096.7344, y: 0.7804878}
+      - {x: -1096.7344, y: -5.4634147}
+      - {x: -1101.375, y: -10.146341}
+      - {x: -1101.375, y: -13.268292}
+      - {x: -1098.2812, y: -16.390244}
+      - {x: -1093.6406, y: -16.390244}
+      - {x: -1089, y: -11.707317}
+      - {x: -1085.9062, y: -16.390244}
+      - {x: -1081.2656, y: -16.390244}
+    - - {x: -937.40625, y: -16.390244}
+      - {x: -934.3125, y: -13.268292}
+      - {x: -934.3125, y: -10.146341}
+      - {x: -931.21875, y: -7.02439}
+      - {x: -931.21875, y: -2.3414633}
+      - {x: -929.6719, y: -0.7804878}
+      - {x: -928.125, y: 8.585366}
+      - {x: -932.7656, y: 14.829268}
+      - {x: -935.8594, y: 14.829268}
+      - {x: -935.8594, y: 16.390244}
+      - {x: -940.5, y: 21.073172}
+      - {x: -946.6875, y: 21.073172}
+      - {x: -952.875, y: 14.829268}
+      - {x: -952.875, y: 11.707317}
+      - {x: -955.96875, y: 8.585366}
+      - {x: -955.96875, y: 5.4634147}
+      - {x: -951.3281, y: 0.7804878}
+      - {x: -957.5156, y: -10.146341}
+      - {x: -957.5156, y: -13.268292}
+      - {x: -954.4219, y: -16.390244}
+      - {x: -948.2344, y: -16.390244}
+      - {x: -945.1406, y: -14.829268}
+      - {x: -945.1406, y: -11.707317}
+      - {x: -942.0469, y: -16.390244}
+    - - {x: -793.5469, y: -16.390244}
+      - {x: -790.4531, y: -13.268292}
+      - {x: -790.4531, y: -11.707317}
+      - {x: -785.8125, y: -7.02439}
+      - {x: -785.8125, y: -0.7804878}
+      - {x: -784.2656, y: 0.7804878}
+      - {x: -770.34375, y: 0.7804878}
+      - {x: -764.15625, y: 7.02439}
+      - {x: -764.15625, y: 10.146341}
+      - {x: -767.25, y: 13.268292}
+      - {x: -784.2656, y: 13.268292}
+      - {x: -787.3594, y: 14.829268}
+      - {x: -787.3594, y: 17.95122}
+      - {x: -790.4531, y: 21.073172}
+      - {x: -796.6406, y: 21.073172}
+      - {x: -802.8281, y: 16.390244}
+      - {x: -802.8281, y: 13.268292}
+      - {x: -809.0156, y: 7.02439}
+      - {x: -809.0156, y: 3.902439}
+      - {x: -807.46875, y: -0.7804878}
+      - {x: -807.46875, y: -3.902439}
+      - {x: -813.65625, y: -10.146341}
+      - {x: -813.65625, y: -13.268292}
+      - {x: -810.5625, y: -16.390244}
+      - {x: -804.375, y: -16.390244}
+      - {x: -801.28125, y: -14.829268}
+      - {x: -801.28125, y: -11.707317}
+      - {x: -798.1875, y: -16.390244}
+    - - {x: -645.0469, y: -13.268292}
+      - {x: -645.0469, y: -10.146341}
+      - {x: -641.9531, y: -7.02439}
+      - {x: -641.9531, y: -2.3414633}
+      - {x: -638.8594, y: 2.3414633}
+      - {x: -628.03125, y: 2.3414633}
+      - {x: -623.3906, y: 7.02439}
+      - {x: -624.9375, y: 11.707317}
+      - {x: -640.40625, y: 11.707317}
+      - {x: -640.40625, y: 13.268292}
+      - {x: -648.1406, y: 21.073172}
+      - {x: -652.78125, y: 21.073172}
+      - {x: -658.96875, y: 14.829268}
+      - {x: -658.96875, y: 11.707317}
+      - {x: -660.5156, y: 10.146341}
+      - {x: -660.5156, y: 2.3414633}
+      - {x: -663.6094, y: -0.7804878}
+      - {x: -663.6094, y: -3.902439}
+      - {x: -669.7969, y: -10.146341}
+      - {x: -669.7969, y: -13.268292}
+      - {x: -666.7031, y: -16.390244}
+      - {x: -660.5156, y: -16.390244}
+      - {x: -657.4219, y: -13.268292}
+      - {x: -654.3281, y: -16.390244}
+      - {x: -648.1406, y: -16.390244}
+    - - {x: -501.1875, y: -13.268292}
+      - {x: -501.1875, y: -10.146341}
+      - {x: -498.09375, y: -7.02439}
+      - {x: -498.09375, y: -2.3414633}
+      - {x: -495, y: 2.3414633}
+      - {x: -482.625, y: 2.3414633}
+      - {x: -479.53125, y: 5.4634147}
+      - {x: -479.53125, y: 8.585366}
+      - {x: -482.625, y: 11.707317}
+      - {x: -496.54688, y: 11.707317}
+      - {x: -496.54688, y: 13.268292}
+      - {x: -504.28125, y: 21.073172}
+      - {x: -508.92188, y: 21.073172}
+      - {x: -516.65625, y: 11.707317}
+      - {x: -516.65625, y: 0.7804878}
+      - {x: -524.3906, y: -8.585366}
+      - {x: -525.9375, y: -13.268292}
+      - {x: -522.84375, y: -16.390244}
+      - {x: -516.65625, y: -16.390244}
+      - {x: -513.5625, y: -13.268292}
+      - {x: -510.46875, y: -16.390244}
+      - {x: -504.28125, y: -16.390244}
+    - - {x: -360.42188, y: -16.390244}
+      - {x: -357.32812, y: -13.268292}
+      - {x: -357.32812, y: -10.146341}
+      - {x: -354.23438, y: -7.02439}
+      - {x: -354.23438, y: -0.7804878}
+      - {x: -352.6875, y: 0.7804878}
+      - {x: -352.6875, y: 5.4634147}
+      - {x: -344.95312, y: 5.4634147}
+      - {x: -340.3125, y: 10.146341}
+      - {x: -340.3125, y: 13.268292}
+      - {x: -343.40625, y: 16.390244}
+      - {x: -351.14062, y: 16.390244}
+      - {x: -354.23438, y: 14.829268}
+      - {x: -360.42188, y: 21.073172}
+      - {x: -368.15625, y: 21.073172}
+      - {x: -372.79688, y: 17.95122}
+      - {x: -375.89062, y: 10.146341}
+      - {x: -375.89062, y: 3.902439}
+      - {x: -374.34375, y: 0.7804878}
+      - {x: -380.53125, y: -10.146341}
+      - {x: -380.53125, y: -13.268292}
+      - {x: -377.4375, y: -16.390244}
+      - {x: -372.79688, y: -16.390244}
+      - {x: -369.70312, y: -14.829268}
+      - {x: -369.70312, y: -11.707317}
+      - {x: -366.60938, y: -16.390244}
+    - - {x: -216.5625, y: -16.390244}
+      - {x: -213.46875, y: -13.268292}
+      - {x: -211.92188, y: -0.7804878}
+      - {x: -210.375, y: 0.7804878}
+      - {x: -210.375, y: 16.390244}
+      - {x: -213.46875, y: 17.95122}
+      - {x: -219.65625, y: 22.634146}
+      - {x: -225.84375, y: 22.634146}
+      - {x: -227.39062, y: 21.073172}
+      - {x: -232.03125, y: 21.073172}
+      - {x: -236.67188, y: 17.95122}
+      - {x: -242.85938, y: 17.95122}
+      - {x: -247.5, y: 13.268292}
+      - {x: -247.5, y: 10.146341}
+      - {x: -244.40625, y: 7.02439}
+      - {x: -232.03125, y: 7.02439}
+      - {x: -232.03125, y: 3.902439}
+      - {x: -230.48438, y: 2.3414633}
+      - {x: -233.57812, y: -0.7804878}
+      - {x: -233.57812, y: -3.902439}
+      - {x: -236.67188, y: -7.02439}
+      - {x: -236.67188, y: -13.268292}
+      - {x: -233.57812, y: -16.390244}
+      - {x: -228.9375, y: -16.390244}
+      - {x: -225.84375, y: -14.829268}
+      - {x: -225.84375, y: -11.707317}
+      - {x: -222.75, y: -16.390244}
+    - - {x: -68.0625, y: -10.146341}
+      - {x: -63.421875, y: -10.146341}
+      - {x: -61.875, y: -11.707317}
+      - {x: -54.140625, y: -11.707317}
+      - {x: -46.40625, y: -7.02439}
+      - {x: -44.859375, y: -2.3414633}
+      - {x: -44.859375, y: 8.585366}
+      - {x: -47.953125, y: 16.390244}
+      - {x: -51.046875, y: 16.390244}
+      - {x: -57.234375, y: 22.634146}
+      - {x: -60.328125, y: 22.634146}
+      - {x: -66.515625, y: 25.756098}
+      - {x: -85.078125, y: 25.756098}
+      - {x: -86.625, y: 24.195122}
+      - {x: -89.71875, y: 24.195122}
+      - {x: -97.453125, y: 21.073172}
+      - {x: -102.09375, y: 14.829268}
+      - {x: -100.546875, y: 10.146341}
+      - {x: -86.625, y: 10.146341}
+      - {x: -85.078125, y: 8.585366}
+      - {x: -85.078125, y: 0.7804878}
+      - {x: -88.171875, y: -3.902439}
+      - {x: -92.8125, y: -10.146341}
+      - {x: -92.8125, y: -13.268292}
+      - {x: -89.71875, y: -16.390244}
+      - {x: -80.4375, y: -14.829268}
+      - {x: -78.890625, y: -16.390244}
+      - {x: -72.703125, y: -16.390244}
+      - {x: -69.609375, y: -13.268292}
+    - - {x: 78.890625, y: -5.4634147}
+      - {x: 94.359375, y: -5.4634147}
+      - {x: 97.453125, y: -2.3414633}
+      - {x: 99, y: 3.902439}
+      - {x: 97.453125, y: 5.4634147}
+      - {x: 95.90625, y: 11.707317}
+      - {x: 92.8125, y: 16.390244}
+      - {x: 81.984375, y: 21.073172}
+      - {x: 69.609375, y: 21.073172}
+      - {x: 64.96875, y: 19.512196}
+      - {x: 60.328125, y: 14.829268}
+      - {x: 60.328125, y: 10.146341}
+      - {x: 58.78125, y: 8.585366}
+      - {x: 58.78125, y: -0.7804878}
+      - {x: 51.046875, y: -10.146341}
+      - {x: 51.046875, y: -13.268292}
+      - {x: 54.140625, y: -16.390244}
+      - {x: 58.78125, y: -16.390244}
+      - {x: 63.421875, y: -13.268292}
+      - {x: 66.515625, y: -16.390244}
+      - {x: 71.15625, y: -16.390244}
+    - - {x: 218.10938, y: -11.707317}
+      - {x: 222.75, y: -8.585366}
+      - {x: 224.29688, y: -5.4634147}
+      - {x: 238.21875, y: -5.4634147}
+      - {x: 242.85938, y: -0.7804878}
+      - {x: 242.85938, y: 2.3414633}
+      - {x: 239.76562, y: 5.4634147}
+      - {x: 225.84375, y: 5.4634147}
+      - {x: 225.84375, y: 11.707317}
+      - {x: 222.75, y: 14.829268}
+      - {x: 219.65625, y: 14.829268}
+      - {x: 218.10938, y: 19.512196}
+      - {x: 208.82812, y: 19.512196}
+      - {x: 204.1875, y: 14.829268}
+      - {x: 204.1875, y: 10.146341}
+      - {x: 202.64062, y: 8.585366}
+      - {x: 202.64062, y: -0.7804878}
+      - {x: 194.90625, y: -10.146341}
+      - {x: 194.90625, y: -13.268292}
+      - {x: 198, y: -16.390244}
+      - {x: 208.82812, y: -14.829268}
+      - {x: 210.375, y: -16.390244}
+      - {x: 215.01562, y: -16.390244}
+      - {x: 218.10938, y: -13.268292}
+    - - {x: 361.96875, y: -11.707317}
+      - {x: 366.60938, y: -7.02439}
+      - {x: 366.60938, y: -2.3414633}
+      - {x: 368.15625, y: -0.7804878}
+      - {x: 377.4375, y: 0.7804878}
+      - {x: 380.53125, y: 3.902439}
+      - {x: 380.53125, y: 8.585366}
+      - {x: 377.4375, y: 11.707317}
+      - {x: 369.70312, y: 11.707317}
+      - {x: 366.60938, y: 10.146341}
+      - {x: 363.51562, y: 14.829268}
+      - {x: 363.51562, y: 17.95122}
+      - {x: 360.42188, y: 21.073172}
+      - {x: 355.78125, y: 21.073172}
+      - {x: 349.59375, y: 16.390244}
+      - {x: 349.59375, y: 11.707317}
+      - {x: 348.04688, y: 10.146341}
+      - {x: 348.04688, y: 0.7804878}
+      - {x: 346.5, y: -0.7804878}
+      - {x: 346.5, y: -3.902439}
+      - {x: 343.40625, y: -7.02439}
+      - {x: 343.40625, y: -13.268292}
+      - {x: 346.5, y: -16.390244}
+      - {x: 358.875, y: -16.390244}
+      - {x: 361.96875, y: -13.268292}
+    - - {x: 516.65625, y: -7.02439}
+      - {x: 516.65625, y: 0.7804878}
+      - {x: 519.75, y: -0.7804878}
+      - {x: 525.9375, y: 3.902439}
+      - {x: 529.03125, y: 5.4634147}
+      - {x: 529.03125, y: 11.707317}
+      - {x: 525.9375, y: 14.829268}
+      - {x: 521.2969, y: 14.829268}
+      - {x: 519.75, y: 13.268292}
+      - {x: 513.5625, y: 21.073172}
+      - {x: 505.82812, y: 19.512196}
+      - {x: 502.73438, y: 16.390244}
+      - {x: 498.09375, y: 16.390244}
+      - {x: 493.45312, y: 11.707317}
+      - {x: 493.45312, y: 0.7804878}
+      - {x: 496.54688, y: -3.902439}
+      - {x: 499.64062, y: -3.902439}
+      - {x: 496.54688, y: -7.02439}
+      - {x: 496.54688, y: -13.268292}
+      - {x: 499.64062, y: -16.390244}
+      - {x: 504.28125, y: -16.390244}
+      - {x: 507.375, y: -14.829268}
+      - {x: 508.92188, y: -11.707317}
+      - {x: 512.0156, y: -11.707317}
+    - - {x: 660.5156, y: -16.390244}
+      - {x: 663.6094, y: -14.829268}
+      - {x: 666.7031, y: -7.02439}
+      - {x: 666.7031, y: -0.7804878}
+      - {x: 665.15625, y: 0.7804878}
+      - {x: 666.7031, y: 3.902439}
+      - {x: 666.7031, y: 10.146341}
+      - {x: 665.15625, y: 11.707317}
+      - {x: 665.15625, y: 16.390244}
+      - {x: 663.6094, y: 19.512196}
+      - {x: 658.96875, y: 21.073172}
+      - {x: 652.78125, y: 21.073172}
+      - {x: 649.6875, y: 14.829268}
+      - {x: 641.9531, y: 14.829268}
+      - {x: 637.3125, y: 10.146341}
+      - {x: 638.8594, y: 7.02439}
+      - {x: 638.8594, y: 0.7804878}
+      - {x: 643.5, y: -5.4634147}
+      - {x: 640.40625, y: -10.146341}
+      - {x: 640.40625, y: -13.268292}
+      - {x: 643.5, y: -16.390244}
+      - {x: 649.6875, y: -16.390244}
+      - {x: 652.78125, y: -14.829268}
+      - {x: 652.78125, y: -11.707317}
+      - {x: 655.875, y: -16.390244}
+    - - {x: 807.46875, y: -13.268292}
+      - {x: 807.46875, y: -11.707317}
+      - {x: 812.1094, y: -7.02439}
+      - {x: 812.1094, y: -2.3414633}
+      - {x: 810.5625, y: 3.902439}
+      - {x: 813.65625, y: 7.02439}
+      - {x: 813.65625, y: 10.146341}
+      - {x: 810.5625, y: 13.268292}
+      - {x: 810.5625, y: 16.390244}
+      - {x: 807.46875, y: 19.512196}
+      - {x: 801.28125, y: 21.073172}
+      - {x: 796.6406, y: 17.95122}
+      - {x: 792, y: 17.95122}
+      - {x: 787.3594, y: 13.268292}
+      - {x: 787.3594, y: 2.3414633}
+      - {x: 792, y: -2.3414633}
+      - {x: 787.3594, y: -7.02439}
+      - {x: 787.3594, y: -13.268292}
+      - {x: 790.4531, y: -16.390244}
+      - {x: 795.09375, y: -16.390244}
+      - {x: 798.1875, y: -14.829268}
+      - {x: 799.7344, y: -16.390244}
+      - {x: 804.375, y: -16.390244}
+    - - {x: 963.7031, y: -13.268292}
+      - {x: 963.7031, y: -11.707317}
+      - {x: 965.25, y: -10.146341}
+      - {x: 968.34375, y: -10.146341}
+      - {x: 969.8906, y: -8.585366}
+      - {x: 985.3594, y: -8.585366}
+      - {x: 986.90625, y: -7.02439}
+      - {x: 991.5469, y: -7.02439}
+      - {x: 999.28125, y: -3.902439}
+      - {x: 1002.375, y: 0.7804878}
+      - {x: 1002.375, y: 5.4634147}
+      - {x: 996.1875, y: 11.707317}
+      - {x: 990, y: 13.268292}
+      - {x: 988.4531, y: 14.829268}
+      - {x: 980.71875, y: 14.829268}
+      - {x: 979.1719, y: 16.390244}
+      - {x: 965.25, y: 16.390244}
+      - {x: 963.7031, y: 17.95122}
+      - {x: 954.4219, y: 17.95122}
+      - {x: 952.875, y: 14.829268}
+      - {x: 945.1406, y: 7.02439}
+      - {x: 943.59375, y: 0.7804878}
+      - {x: 945.1406, y: -3.902439}
+      - {x: 942.0469, y: -8.585366}
+      - {x: 942.0469, y: -13.268292}
+      - {x: 945.1406, y: -16.390244}
+      - {x: 951.3281, y: -16.390244}
+      - {x: 954.4219, y: -14.829268}
+      - {x: 955.96875, y: -16.390244}
+      - {x: 960.6094, y: -16.390244}
+    - - {x: 1107.5625, y: -13.268292}
+      - {x: 1109.1094, y: -10.146341}
+      - {x: 1124.5781, y: -8.585366}
+      - {x: 1132.3125, y: -5.4634147}
+      - {x: 1135.4062, y: -0.7804878}
+      - {x: 1135.4062, y: 5.4634147}
+      - {x: 1129.2188, y: 11.707317}
+      - {x: 1126.125, y: 11.707317}
+      - {x: 1124.5781, y: 13.268292}
+      - {x: 1115.2969, y: 13.268292}
+      - {x: 1107.5625, y: 19.512196}
+      - {x: 1099.8281, y: 19.512196}
+      - {x: 1095.1875, y: 14.829268}
+      - {x: 1095.1875, y: 11.707317}
+      - {x: 1092.0938, y: 8.585366}
+      - {x: 1092.0938, y: 5.4634147}
+      - {x: 1090.5469, y: 3.902439}
+      - {x: 1090.5469, y: -3.902439}
+      - {x: 1087.4531, y: -7.02439}
+      - {x: 1087.4531, y: -13.268292}
+      - {x: 1090.5469, y: -16.390244}
+      - {x: 1095.1875, y: -16.390244}
+      - {x: 1098.2812, y: -14.829268}
+      - {x: 1099.8281, y: -16.390244}
+      - {x: 1104.4688, y: -16.390244}
+    - - {x: 1252.9688, y: -13.268292}
+      - {x: 1252.9688, y: -10.146341}
+      - {x: 1256.0625, y: -7.02439}
+      - {x: 1256.0625, y: -3.902439}
+      - {x: 1260.7031, y: -2.3414633}
+      - {x: 1260.7031, y: 13.268292}
+      - {x: 1257.6094, y: 16.390244}
+      - {x: 1254.5156, y: 16.390244}
+      - {x: 1251.4219, y: 19.512196}
+      - {x: 1242.1406, y: 19.512196}
+      - {x: 1239.0469, y: 13.268292}
+      - {x: 1235.9531, y: 8.585366}
+      - {x: 1235.9531, y: 5.4634147}
+      - {x: 1234.4062, y: 3.902439}
+      - {x: 1234.4062, y: -3.902439}
+      - {x: 1231.3125, y: -7.02439}
+      - {x: 1231.3125, y: -13.268292}
+      - {x: 1234.4062, y: -16.390244}
+      - {x: 1239.0469, y: -16.390244}
+      - {x: 1242.1406, y: -14.829268}
+      - {x: 1243.6875, y: -16.390244}
+      - {x: 1249.875, y: -16.390244}
+    - - {x: 1396.8281, y: -13.268292}
+      - {x: 1396.8281, y: -10.146341}
+      - {x: 1399.9219, y: -7.02439}
+      - {x: 1399.9219, y: -3.902439}
+      - {x: 1404.5625, y: -2.3414633}
+      - {x: 1404.5625, y: 13.268292}
+      - {x: 1401.4688, y: 16.390244}
+      - {x: 1398.375, y: 16.390244}
+      - {x: 1395.2812, y: 19.512196}
+      - {x: 1387.5469, y: 19.512196}
+      - {x: 1384.4531, y: 16.390244}
+      - {x: 1384.4531, y: 13.268292}
+      - {x: 1379.8125, y: 8.585366}
+      - {x: 1379.8125, y: 5.4634147}
+      - {x: 1378.2656, y: 3.902439}
+      - {x: 1378.2656, y: -3.902439}
+      - {x: 1375.1719, y: -7.02439}
+      - {x: 1375.1719, y: -13.268292}
+      - {x: 1378.2656, y: -16.390244}
+      - {x: 1382.9062, y: -16.390244}
+      - {x: 1386, y: -14.829268}
+      - {x: 1387.5469, y: -16.390244}
+      - {x: 1393.7344, y: -16.390244}
+    - - {x: 1540.6875, y: -13.268292}
+      - {x: 1540.6875, y: -10.146341}
+      - {x: 1543.7812, y: -7.02439}
+      - {x: 1543.7812, y: -3.902439}
+      - {x: 1545.3281, y: -3.902439}
+      - {x: 1549.9688, y: 0.7804878}
+      - {x: 1549.9688, y: 10.146341}
+      - {x: 1545.3281, y: 16.390244}
+      - {x: 1542.2344, y: 16.390244}
+      - {x: 1539.1406, y: 19.512196}
+      - {x: 1532.9531, y: 19.512196}
+      - {x: 1528.3125, y: 14.829268}
+      - {x: 1528.3125, y: 11.707317}
+      - {x: 1523.6719, y: 10.146341}
+      - {x: 1523.6719, y: 5.4634147}
+      - {x: 1522.125, y: 3.902439}
+      - {x: 1522.125, y: -3.902439}
+      - {x: 1519.0312, y: -7.02439}
+      - {x: 1519.0312, y: -13.268292}
+      - {x: 1522.125, y: -16.390244}
+      - {x: 1526.7656, y: -16.390244}
+      - {x: 1529.8594, y: -14.829268}
+      - {x: 1531.4062, y: -16.390244}
+      - {x: 1537.5938, y: -16.390244}
+    physicsShape: []
+    bones: []
+    spriteID: 8272c18de2edda64b9c450fb68fdf456
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

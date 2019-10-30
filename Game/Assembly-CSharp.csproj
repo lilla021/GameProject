@@ -55,6 +55,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BarManager.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\DarkKnight.cs" />
+     <Compile Include="Assets\Scripts\DarkKnightFollow.cs" />
      <Compile Include="Assets\Scripts\FollowTarget.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
