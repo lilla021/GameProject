@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 
     void Attack()
     {
-        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && Mathf.Abs(player.velocity.x) <= Mathf.Abs(currentSpeed * Time.deltaTime)) {
+        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
             isAttack = Input.GetMouseButtonDown(0) ? true : false;
             mAnimator.SetBool("isAttack", isAttack);
         }
