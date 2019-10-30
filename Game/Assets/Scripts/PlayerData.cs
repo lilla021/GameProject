@@ -13,6 +13,6 @@ public static class PlayerData
     public static float AttackStrength { get; set; }
     public static float DreamTimerMaxValue { get; set; } = 30f;
     public static float DreamTimerCurrentValue { get; set; } = 30f;
-    public static bool IsInDream { get; set; } = true;
+    public static bool IsInDream { get; set; } = false;
 
 }
