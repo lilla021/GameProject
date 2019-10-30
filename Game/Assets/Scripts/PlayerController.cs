@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour {
             isJumping = false;
         }
 
-        if (isDashing) {
+        if (isDashing && !isAttack) {
             player.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
             isDashing = false;
         }
@@ -98,6 +98,13 @@ public class PlayerController : MonoBehaviour {
         if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack")) {
             isAttack = Input.GetMouseButtonDown(0) ? true : false;
             mAnimator.SetBool("isAttack", isAttack);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Spike")) {
+            mAnimator.Play("Death");
+            player.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }
