@@ -98,4 +98,6 @@ public class PlayerController : MonoBehaviour {
             mAnimator.SetBool("isAttack", false);
         }
     }
+
+    
 }

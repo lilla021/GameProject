@@ -51,13 +51,11 @@ public class Wolf : MonoBehaviour
         
          if (transform.position.x > CurPos)
          {
-            Debug.Log("Righty");
             CurPos = transform.position.x;
             transform.localScale = new Vector2(-1, transform.localScale.y);
          }
          if (transform.position.x < CurPos) 
          {
-            Debug.Log("lefty");
             CurPos = transform.position.x;
             transform.localScale = new Vector2(1, transform.localScale.y);
          }

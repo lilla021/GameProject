@@ -7,7 +7,7 @@ public class DarkKnight : MonoBehaviour
 
     Rigidbody2D mRigidbody;
     Animator mAnimator;
-
+    public static float KnightHP = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +20,22 @@ public class DarkKnight : MonoBehaviour
     {
         if (DarkKnightFollow.follow == true)
         {
-            Debug.Log("Knight run");
             mAnimator.SetBool("isRunning", true);
         }
         else
         {
             mAnimator.SetBool("isRunning", false);
+        }
+
+        Death();
+    }
+
+    void Death()
+    {
+        if(KnightHP == 0)
+        {
+            mAnimator.SetBool("isDeath", true);
+            Destroy(gameObject);
         }
     }
 }
