@@ -5,9 +5,13 @@ using UnityEngine;
 public class DarkKnight : MonoBehaviour
 {
 
-    Rigidbody2D mRigidbody;
+    public Rigidbody2D mRigidbody;
     Animator mAnimator;
     public static float KnightHP = 100f;
+    public float KnightDefense = 0f ;
+    public bool ShieldOn = false;
+    public bool ShieldBash = false;
+    public float KnightAtk = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,14 +32,37 @@ public class DarkKnight : MonoBehaviour
         {
             mAnimator.SetBool("isRunning", false);
         }
+        IsInDream();
         Death();
     }
 
     void Death()
     {
-        if(KnightHP == 0f)
+        if(KnightHP <= 0f)
         {
+            mAnimator.SetBool("isAttack", false);
             mAnimator.Play("Death");
         }
     }
+
+    void IsInDream()
+    {
+        if(PlayerData.IsInDream == true)
+        {
+            KnightDefense = 15f;
+            ShieldOn = true;
+            mAnimator.SetBool("isShield", ShieldOn);
+            ShieldBash = true;
+            mAnimator.SetBool("isRunning", false);
+            mAnimator.SetBool("isAttack", false);
+        }
+        else
+        {
+            KnightDefense = 0f;
+            ShieldBash = false;
+            ShieldOn = false;
+            mAnimator.SetBool("isShield", ShieldOn);
+        }
+    }
+
 }
