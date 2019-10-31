@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float dashForce;
 
-    [SerializeField]
-    Transform groundCheck;
+    GroundCheck[] groundCheck;
     bool isGrounded = false;
 
     [SerializeField]
@@ -39,6 +38,7 @@ public class PlayerController : MonoBehaviour {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         player = GetComponent<Rigidbody2D>();
         mAnimator = GetComponent<Animator>();
+        groundCheck = transform.GetComponentsInChildren<GroundCheck>();
     }
 
     void Update() {
@@ -77,18 +77,16 @@ public class PlayerController : MonoBehaviour {
                 colorCorrection.enabled = false;
             }
         }
+        if(PlayerData.CurrentHP <= 0) {
+            mAnimator.Play("Death");
+        }
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate() {
-        isGrounded = false;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, 0.35f, LayerMask.GetMask("Ground"));
-        for (int i = 0; i < colliders.Length; i++) {
-            if (colliders[i].gameObject != gameObject) {
-                isGrounded = true;
-                extraJump = 1;
-            }
-        }
+        isGrounded = checkGrounded();
+        if (isGrounded) extraJump = 1;
+
         mAnimator.SetBool("isGrounded", isGrounded);
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
@@ -121,6 +119,14 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    bool checkGrounded() {
+        foreach (GroundCheck g in groundCheck) {
+            if (g.CheckGrounded(0.35f, LayerMask.GetMask("Ground"), gameObject)) {
+                return true;
+            }
+        }
+        return false;
+    }
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Spike")) {
             mAnimator.Play("Death");

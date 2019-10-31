@@ -31,9 +31,17 @@ public class Wolf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (followTarget.follow == true)
+        if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Fall") || mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Land")) {
+            mRun = false;
+            mWalk = false;
+        }
+        else if (followTarget.follow && !PlayerData.IsInDream)
         {
             mRun = true;
+        }
+        else if (followTarget.follow && PlayerData.IsInDream) {
+            mRun = false;
+            mWalk = false;
         }
         else
         {
@@ -75,6 +83,12 @@ public class Wolf : MonoBehaviour
         if(WolfHP == 0f)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.collider.CompareTag("Player") && (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run") || mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Fall"))) {
+            PlayerData.CurrentHP -= 5;
         }
     }
 
