@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetButtonDown("DreamWorld")) {
             PlayerData.IsInDream = true;
-            colorCorrection.enabled = true;
+            //colorCorrection.enabled = true;
         }
         if (PlayerData.IsInDream) {
             PlayerData.DreamTimerCurrentValue -= Time.deltaTime;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour {
             if(PlayerData.DreamTimerCurrentValue <= 0) {
                 PlayerData.DreamTimerCurrentValue = PlayerData.DreamTimerMaxValue;
                 PlayerData.IsInDream = false;
-                colorCorrection.enabled = false;
+                //colorCorrection.enabled = false;
             }
         }
         if(PlayerData.CurrentHP <= 0) {
