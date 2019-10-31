@@ -10,16 +10,27 @@ public class DarkKnightFollow : MonoBehaviour
     float mFollowSpeed;
     [SerializeField]
     float mFollowRange;
+    [SerializeField]
+    float mAttackRange;
+    [SerializeField]
+    float dashForce;
+    [SerializeField]
+    float dashRange;
 
     public bool facingRight = true;
     public static bool follow;
+    bool isAttack = false;
+
 
     Animator mAnimator;
+
+    DarkKnight dark;
 
     float mArriveThreshold = 0.05f;
     void Start()
     {
         mAnimator = GetComponent<Animator>();
+        dark = GetComponent<DarkKnight>();
     }
 
     void Update()
@@ -34,16 +45,38 @@ public class DarkKnightFollow : MonoBehaviour
             Vector2 direction = mTarget.transform.position - transform.position;
             if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
             {
-                if (direction.magnitude <= mFollowRange)
+                if (PlayerData.IsInDream == false)
                 {
-                    follow = true;
-                    if (direction.magnitude > mArriveThreshold)
+                    if (direction.magnitude <= mFollowRange)
                     {
-                        transform.Translate(direction.normalized * mFollowSpeed * Time.deltaTime, Space.World);
+                        follow = true;
+                        if (direction.magnitude > mArriveThreshold)
+                        {
+                            transform.Translate(direction.normalized * mFollowSpeed * Time.deltaTime, Space.World);
+                        }
+                        else
+                        {
+                            transform.position = mTarget.transform.position;
+                        }
+                        if (direction.magnitude <= mAttackRange)
+                        {
+                            isAttack = true;
+                            mAnimator.SetBool("isAttack", isAttack);
+                            if (direction.magnitude > mArriveThreshold)
+                            {
+                                transform.Translate(direction.normalized * mFollowSpeed * Time.deltaTime, Space.World);
+                            }
+                            else
+                            {
+                                transform.position = mTarget.transform.position;
+                            }
+                        }
                     }
                     else
                     {
-                        transform.position = mTarget.transform.position;
+                        follow = false;
+                        isAttack = false;
+                        mAnimator.SetBool("isAttack", isAttack);
                     }
                 }
                 else
@@ -51,16 +84,14 @@ public class DarkKnightFollow : MonoBehaviour
                     follow = false;
                 }
 
-                if (Vector3.Distance(mTarget.position, transform.position) < mFollowRange)
-                {
+                Vector3 scale = new Vector3((direction.x / Mathf.Abs(direction.x)), 1, 0);
+                transform.localScale = scale;
 
-                    transform.position = Vector2.MoveTowards(transform.position, mTarget.position, mFollowSpeed * Time.deltaTime);
-                    if (mTarget.position.x > transform.position.x && !facingRight) //if the target is to the right of enemy and the enemy is not facing right
-                        Flip();
-                    if (mTarget.position.x < transform.position.x && facingRight)
-                        Flip();
-                }
+
+
             }
+
+
         }
     }
 
@@ -69,11 +100,6 @@ public class DarkKnightFollow : MonoBehaviour
         mTarget = target;
     }
 
-    void Flip()
-    {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-        facingRight = !facingRight;
-    }
+
+
 }

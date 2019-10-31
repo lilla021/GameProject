@@ -20,11 +20,11 @@ public class SwordAttack : MonoBehaviour
     {
         if (col.CompareTag("Enemy"))
         {
-            if(col.name == "DarkKnight")
+            if (col.name == "DarkKnight")
             {
-                DarkKnight.KnightHP -= PlayerData.AttackStrength;
+                DarkKnight.KnightHP -= (PlayerData.AttackStrength - col.gameObject.GetComponent<DarkKnight>().KnightDefense);
             }
-            else if(col.name == "Wolf")
+            else if (col.name == "Wolf")
             {
                 Debug.Log("atk wolf");
                 Wolf.WolfHP -= PlayerData.AttackStrength;
