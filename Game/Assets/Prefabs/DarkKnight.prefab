@@ -178,7 +178,11 @@ MonoBehaviour:
   mTarget: {fileID: 5232314973522767621, guid: 3d9448636c276ca4b84c3539323a1868, type: 3}
   mFollowSpeed: 2
   mFollowRange: 4
+  mAttackRange: 2
+  dashForce: 5
+  dashRange: 5
   facingRight: 1
+  CurPos: 0
 --- !u!114 &706581145562301044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818af0758460a9c40900e0c47e5eec07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRigidbody: {fileID: 0}
+  KnightDefense: 0
+  ShieldOn: 0
+  ShieldBash: 0
+  KnightAtk: 10
 --- !u!61 &706581145562301040
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\DarkKnight.cs" />
      <Compile Include="Assets\Scripts\DarkKnightFollow.cs" />
+     <Compile Include="Assets\Scripts\DarkSwordDmg.cs" />
      <Compile Include="Assets\Scripts\DeathAnim.cs" />
      <Compile Include="Assets\Scripts\DestroyMask.cs" />
      <Compile Include="Assets\Scripts\FollowTarget.cs" />
