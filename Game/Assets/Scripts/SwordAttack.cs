@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
+        //DarkKnight dark;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //GameObject darkKnight = GameObject.Find("DarkKnight");
+       // dark = darkKnight.GetComponent<DarkKnight>();       
     }
 
     // Update is called once per frame

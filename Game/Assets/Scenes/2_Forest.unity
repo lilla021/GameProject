@@ -18377,6 +18377,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5232314975145634688}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1686365861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 703785092480052656, guid: b6958641b1c28ad4581e6ce358574e0a,
@@ -18384,15 +18385,47 @@ GameObject:
   m_PrefabInstance: {fileID: 345551466876043037}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1686365863
+=======
+--- !u!1 &1917816670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 706581144507760067, guid: 12f6943d39a6a7b45a4a5a0c00b29ba3,
+    type: 3}
+  m_PrefabInstance: {fileID: 706581144019955498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1917816672
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917816670}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000000041762362, y: -0.035032813}
+  m_Size: {x: 1.0000002, y: 0.6029617}
+  m_Direction: 1
+--- !u!114 &1917816673
+>>>>>>> DreamDarkKnight
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1686365861}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86eead6075508714fb79aac71d775b51, type: 3}
+=======
+  m_GameObject: {fileID: 1917816670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa02a10668ea5448b1020a24afcafb6, type: 3}
+>>>>>>> DreamDarkKnight
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1938045688
