@@ -8,7 +8,7 @@ public class DarkKnight : MonoBehaviour
     public Rigidbody2D mRigidbody;
     Animator mAnimator;
     public static float KnightHP = 100f;
-    public float KnightDefense = 0f;
+    public float KnightDefense = 0f ;
     public bool ShieldOn = false;
     public bool ShieldBash = false;
     public float KnightAtk = 10f;
@@ -38,7 +38,7 @@ public class DarkKnight : MonoBehaviour
 
     void Death()
     {
-        if (KnightHP <= 0f)
+        if(KnightHP <= 0f)
         {
             mAnimator.SetBool("isAttack", false);
             mAnimator.Play("Death");
@@ -47,7 +47,7 @@ public class DarkKnight : MonoBehaviour
 
     void IsInDream()
     {
-        if (PlayerData.IsInDream == true)
+        if(PlayerData.IsInDream == true)
         {
             KnightDefense = 15f;
             ShieldOn = true;
@@ -55,11 +55,9 @@ public class DarkKnight : MonoBehaviour
             ShieldBash = true;
             mAnimator.SetBool("isRunning", false);
             mAnimator.SetBool("isAttack", false);
-            mRigidbody.mass = 1000f;
         }
         else
         {
-            mRigidbody.mass = 3f;
             KnightDefense = 0f;
             ShieldBash = false;
             ShieldOn = false;
