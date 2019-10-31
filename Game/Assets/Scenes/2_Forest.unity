@@ -18317,8 +18317,6 @@ Transform:
   m_PrefabInstance: {fileID: 5232314975145634688}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< refs/remotes/origin/master
-<<<<<<< HEAD
 --- !u!1 &1686365861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 703785092480052656, guid: b6958641b1c28ad4581e6ce358574e0a,
@@ -18327,10 +18325,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1686365863
 =======
-=======
->>>>>>> Dream DarkNight
-=======
->>>>>>> DreamDarkKnight
 --- !u!1 &1917816670 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 706581144507760067, guid: 12f6943d39a6a7b45a4a5a0c00b29ba3,
@@ -18354,12 +18348,6 @@ CapsuleCollider2D:
   m_Size: {x: 1.0000002, y: 0.6029617}
   m_Direction: 1
 --- !u!114 &1917816673
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/master
->>>>>>> DreamDarkKnight
-=======
->>>>>>> Dream DarkNight
-=======
 >>>>>>> DreamDarkKnight
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18367,27 +18355,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
-<<<<<<< refs/remotes/origin/master
-<<<<<<< HEAD
   m_GameObject: {fileID: 1686365861}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86eead6075508714fb79aac71d775b51, type: 3}
 =======
-=======
->>>>>>> Dream DarkNight
-=======
->>>>>>> DreamDarkKnight
   m_GameObject: {fileID: 1917816670}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fa02a10668ea5448b1020a24afcafb6, type: 3}
-<<<<<<< HEAD
-<<<<<<< refs/remotes/origin/master
->>>>>>> DreamDarkKnight
-=======
->>>>>>> Dream DarkNight
-=======
 >>>>>>> DreamDarkKnight
   m_Name: 
   m_EditorClassIdentifier: 
