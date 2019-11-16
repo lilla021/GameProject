@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 345551466823256534}
   - component: {fileID: 345551466823256535}
-  - component: {fileID: 345551466823256532}
   - component: {fileID: 345551466823256533}
   - component: {fileID: 345551466823256531}
   - component: {fileID: 345551466823256528}
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 051d0a974f89a99479010eb471caf747, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -86,25 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &345551466823256532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345551466823256538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bd3693959dd924c994f130e7228cd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mTarget: {fileID: 0}
-  mFollowSpeed: 7
-  mFollowRange: 6
-  jumpXMultiplier: 0.4
-  jumpYMultiplier: 0.75
-  facingRight: 1
-  follow: 0
 --- !u!114 &345551466823256533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  player: {fileID: 0}
+  mFollowRange: 6
+  mFollowSpeed: 7
+  jumpXMultiplier: 0.4
+  jumpYMultiplier: 0.65
   min: 2
   max: 3
   CurPos: 0

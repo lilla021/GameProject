@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1019944331}
   - component: {fileID: 1019944330}
   - component: {fileID: 1019944329}
-  - component: {fileID: 1019944328}
   - component: {fileID: 1019944327}
   - component: {fileID: 1019944326}
   - component: {fileID: 1019944325}
@@ -106,25 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1019944328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019944324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0164730bdf3ed42b81562579b86667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mTarget: {fileID: 5232314973522767621, guid: 3d9448636c276ca4b84c3539323a1868, type: 3}
-  mFollowSpeed: 2
-  mFollowRange: 4
-  mAttackRange: 2
-  dashForce: 5
-  dashRange: 5
-  facingRight: 1
 --- !u!114 &1019944327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,11 +117,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818af0758460a9c40900e0c47e5eec07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mRigidbody: {fileID: 0}
-  KnightDefense: 0
+  player: {fileID: 0}
   ShieldOn: 0
   ShieldBash: 0
   KnightAtk: 10
+  mFollowSpeed: 2
+  mFollowRange: 4
+  mAttackRange: 1.5
+  dashForce: 5
+  dashRange: 5
 --- !u!61 &1019944326
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -197,7 +181,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1917816671}
   - component: {fileID: 1917816672}
-  - component: {fileID: 8813054105929602766}
   m_Layer: 0
   m_Name: DarkSword
   m_TagString: Untagged
@@ -235,15 +218,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0000000041762362, y: -0.035032813}
   m_Size: {x: 1.0000002, y: 0.6029617}
   m_Direction: 1
---- !u!114 &8813054105929602766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917816670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fa02a10668ea5448b1020a24afcafb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

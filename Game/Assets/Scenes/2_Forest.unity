@@ -17843,6 +17843,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mTarget
+      value: 
+      objectReference: {fileID: 1665860741}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1019944324, guid: decaa3d8b2a64d340b1948b5965d7d33, type: 3}
       propertyPath: m_Name
       value: DarkKnight
@@ -17891,14 +17899,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1019944328, guid: decaa3d8b2a64d340b1948b5965d7d33, type: 3}
-      propertyPath: mTarget
-      value: 
-      objectReference: {fileID: 1665860741}
     - target: {fileID: 1019944330, guid: decaa3d8b2a64d340b1948b5965d7d33, type: 3}
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1019944327, guid: decaa3d8b2a64d340b1948b5965d7d33, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1665860745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: decaa3d8b2a64d340b1948b5965d7d33, type: 3}
 --- !u!1 &1479151886
@@ -18511,6 +18519,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5232314975145634688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1665860745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5232314973522767622, guid: 3d9448636c276ca4b84c3539323a1868,
+    type: 3}
+  m_PrefabInstance: {fileID: 5232314975145634688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665860739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000fc4435a1e124478624637c74a3d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1686365861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 703785092480052656, guid: b6958641b1c28ad4581e6ce358574e0a,
@@ -19097,6 +19117,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: mTarget
+      value: 
+      objectReference: {fileID: 1665860741}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 345551466823256538, guid: b6958641b1c28ad4581e6ce358574e0a,
         type: 3}
       propertyPath: m_Name
@@ -19142,16 +19170,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 345551466823256532, guid: b6958641b1c28ad4581e6ce358574e0a,
+    - target: {fileID: 345551466823256533, guid: b6958641b1c28ad4581e6ce358574e0a,
         type: 3}
-      propertyPath: mTarget
+      propertyPath: player
       value: 
-      objectReference: {fileID: 1665860741}
-    - target: {fileID: 345551466823256535, guid: b6958641b1c28ad4581e6ce358574e0a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1665860745}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6958641b1c28ad4581e6ce358574e0a, type: 3}
 --- !u!1001 &2728203808586283422
@@ -19384,6 +19407,11 @@ PrefabInstance:
       propertyPath: colorCorrection
       value: 
       objectReference: {fileID: 411341735}
+    - target: {fileID: 5232314973522767624, guid: 3d9448636c276ca4b84c3539323a1868,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d9448636c276ca4b84c3539323a1868, type: 3}
 --- !u!1001 &8029094012579126362
