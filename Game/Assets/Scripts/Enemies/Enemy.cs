@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField]
     protected PlayerController player;
 
     protected GroundCheck[] groundCheck;
@@ -15,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     protected float defense = 0;
     protected float attack;
 
+    protected bool isDead = false;
     protected bool isGrounded = false;
 
     protected abstract void Move();

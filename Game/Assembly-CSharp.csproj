@@ -65,8 +65,11 @@
     <Compile Include="Assets\Scripts\DeathAnim.cs" />
     <Compile Include="Assets\Scripts\DestroyMask.cs" />
     <Compile Include="Assets\Scripts\DreamFilterScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Arrow.cs" />
     <Compile Include="Assets\Scripts\Enemies\DarkKnight.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Spearman.cs" />
     <Compile Include="Assets\Scripts\Enemies\Wolf.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
