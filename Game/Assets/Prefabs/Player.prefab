@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5232314973522767623}
   - component: {fileID: 5232314973522767626}
   - component: {fileID: 5232314973522767625}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -129,10 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 400
-  jumpForce: 20
+  jumpForce: 17
   dashForce: 100
-  groundCheck: {fileID: 5232314973473423403}
-  colorCorrection: {fileID: 0}
+  hitTime: 0.4
 --- !u!50 &5232314973522767624
 Rigidbody2D:
   serializedVersion: 4
