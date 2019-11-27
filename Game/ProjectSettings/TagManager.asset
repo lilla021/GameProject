@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spike
   - Enemy
+  - Platform
+  - RockManager
+  - RockSpawner
   layers:
   - Default
   - TransparentFX
