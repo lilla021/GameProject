@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : Enemy
+public class Arrow : MonoBehaviour
 {
     [SerializeField]
     float speed;
     [SerializeField]
     float deathTime;
+
+    PlayerController player;
+    Rigidbody2D mRigidbody;
+    float attack;
 
     bool move = true;
     Collider2D col;
@@ -26,17 +30,10 @@ public class Arrow : Enemy
     void Update()
     {
         Move();
-        Death();
     }
 
-    protected override void Move() {
+    void Move() {
         if (move) transform.Translate(Vector2.right * speed * Time.deltaTime);
-    }
-
-    protected override void Attack() {
-    }
-
-    protected override void Death() {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

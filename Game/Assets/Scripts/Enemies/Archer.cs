@@ -26,7 +26,7 @@ public class Archer : Enemy
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
         HP = 40;
-        attack = 15;
+        xp = 5;
         attackCounter = attackTime;
     }
 

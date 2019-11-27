@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14681,7 +14681,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mForce: 0.5
-  octo: {fileID: 0}
 --- !u!50 &1263840980
 Rigidbody2D:
   serializedVersion: 4
@@ -14837,7 +14836,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mForce: 0.5
-  octo: {fileID: 0}
 --- !u!61 &1281636981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15202,7 +15200,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mForce: 0.5
-  octo: {fileID: 0}
 --- !u!61 &1908327883
 BoxCollider2D:
   m_ObjectHideFlags: 0

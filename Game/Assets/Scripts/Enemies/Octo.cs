@@ -7,9 +7,6 @@ public class Octo : MonoBehaviour
     [SerializeField]
     float mForce;
 
-    [SerializeField]
-    //float mOctoSpeed;
-
     Rigidbody2D octo;
 
     Vector3 startPosition;
@@ -23,8 +20,7 @@ public class Octo : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //transform.Translate(0f, Time.deltaTime, 0f);
-        if (octo.transform.position.y <= startPosition.y)  //makes player jump
+        if (octo.transform.position.y <= startPosition.y && octo.velocity.y < 0)  //makes player jump
         {
 
             octo.AddForce(new Vector2(0, 6), ForceMode2D.Impulse);

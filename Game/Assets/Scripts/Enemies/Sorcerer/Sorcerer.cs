@@ -39,6 +39,7 @@ public class Sorcerer : Enemy
         mRigidbody = GetComponent<Rigidbody2D>();
         HP = 100;
         attack = 20;
+        xp = 25;
     }
 
     // Update is called once per frame

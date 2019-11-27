@@ -36,6 +36,7 @@ public class Wolf : Enemy
         CurPos = transform.position.x;
         HP = 60;
         attack = 5;
+        xp = 5;
     }
 
     // Update is called once per frame

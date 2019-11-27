@@ -31,6 +31,7 @@ public class DarkKnight : Enemy
         mRigidbody = GetComponent<Rigidbody2D>();
         HP = 100;
         attack = 10;
+        xp = 10;
     }
 
     // Update is called once per frame

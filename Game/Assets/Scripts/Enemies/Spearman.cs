@@ -31,6 +31,7 @@ public class Spearman : Enemy
         mRigidbody = GetComponent<Rigidbody2D>();
         HP = 75;
         attack = 15;
+        xp = 5;
         attackCounter = attackTime;
     }
 

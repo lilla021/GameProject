@@ -143,7 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b9a4eac64dc714c8a08a84e2e95d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5232314973522767622, guid: 3d9448636c276ca4b84c3539323a1868, type: 3}
+  hpPotion: {fileID: 5751022580721770901, guid: 0190287995b11ff47a7bca52978a5b4e,
+    type: 3}
+  manaPotion: {fileID: 3619225793945802465, guid: c93152bb703a86048aa098476120b007,
+    type: 3}
   me: {fileID: 0}
   mFollowSpeed: 2
   mFollowRange: 4
