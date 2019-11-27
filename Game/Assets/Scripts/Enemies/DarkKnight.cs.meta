@@ -3,7 +3,11 @@ guid: 818af0758460a9c40900e0c47e5eec07
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hpPotion: {fileID: 5751022580721770901, guid: 0190287995b11ff47a7bca52978a5b4e,
+      type: 3}
+  - manaPotion: {fileID: 3619225793945802465, guid: c93152bb703a86048aa098476120b007,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
