@@ -41,9 +41,12 @@ public abstract class Enemy : MonoBehaviour
 
     private void OnDestroy() {
         PlayerData.CurrentXP += xp;
-        int potionHP = Random.Range(0, 6);
-        int potionMP = Random.Range(0, 6);
-        if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right*0.02f, Quaternion.identity);
-        if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right*0.02f, Quaternion.identity);
+        if (!PlayerData.IsInDream)
+        {
+            int potionHP = Random.Range(0, 6);
+            int potionMP = Random.Range(0, 6);
+            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.02f, Quaternion.identity);
+            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.02f, Quaternion.identity);
+        }
     }
 }

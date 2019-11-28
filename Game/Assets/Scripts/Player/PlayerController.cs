@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         Death();
         Inputs();
         DreamWorld();
+        HandleLevelUp();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -180,6 +181,16 @@ public class PlayerController : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void HandleLevelUp()
+    {
+        if (PlayerData.CurrentXP >= PlayerData.MaxXP)
+        {
+            PlayerData.CurrentLevel++;
+            PlayerData.LevelUpPoints++;
+            PlayerData.CurrentXP = 0;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
