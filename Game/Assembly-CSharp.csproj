@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\DreamFilterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\DarkKnight.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FollowTarget.cs" />
     <Compile Include="Assets\Scripts\Enemies\Wolf.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\MoveWithPlatform.cs" />
@@ -75,7 +76,9 @@
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Player\SwordAttack.cs" />
+    <Compile Include="Assets\Scripts\ReverseGravity.cs" />
     <Compile Include="Assets\Scripts\SpawnerManager.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/dina/Documents/GitHub/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

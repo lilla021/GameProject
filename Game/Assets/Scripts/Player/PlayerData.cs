@@ -14,5 +14,6 @@ public static class PlayerData
     public static float DreamTimerMaxValue { get; set; } = 10f;
     public static float DreamTimerCurrentValue { get; set; } = 10f;
     public static bool IsInDream { get; set; } = false;
+    public static bool IsInReverseGravity { get; set; } = false;
 
 }

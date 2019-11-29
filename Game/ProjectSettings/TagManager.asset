@@ -9,6 +9,7 @@ TagManager:
   - Platform
   - RockManager
   - RockSpawner
+  - Slime
   layers:
   - Default
   - TransparentFX
