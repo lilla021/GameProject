@@ -49,8 +49,14 @@ public class PlayerController : MonoBehaviour {
         //Store the current horizontal input in the float moveHorizontal.
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         //Flip the sprite when necessary.
-        if (moveHorizontal != 0) {
+        if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity) {
             transform.localScale = new Vector2(moveHorizontal, 1);           
+            mAnimator.SetBool("isRunning", true);
+        }
+
+        else if (moveHorizontal != 0 && PlayerData.IsInReverseGravity)
+        {
+            transform.localScale = new Vector2(-moveHorizontal, 1);
             mAnimator.SetBool("isRunning", true);
         }
         else
