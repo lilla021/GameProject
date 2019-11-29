@@ -95,6 +95,7 @@ MonoBehaviour:
   HP: {fileID: 652339069027825003}
   Mana: {fileID: 652339069416224607}
   DreamTimer: {fileID: 652339068793897511}
+  XP: {fileID: 9101669246971247028}
 --- !u!1 &652339068793897509
 GameObject:
   m_ObjectHideFlags: 0

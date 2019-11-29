@@ -5,16 +5,23 @@ using UnityEngine;
 public class DreamFilterScript : MonoBehaviour
 {
     public GameObject DreamFilter;
+    public GameObject StatsMenu;
     
     void Update()
     {
-        if(PlayerData.IsInDream)
+        DreamFilter.SetActive(PlayerData.IsInDream);
+
+        if (Input.GetKeyDown("m"))
         {
-            DreamFilter.SetActive(true);
+            if (Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+            StatsMenu.SetActive(!StatsMenu.activeSelf);
         }
-        else
-        {
-            DreamFilter.SetActive(false);
-;       }
     }
 }

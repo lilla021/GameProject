@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField]
     protected PlayerController player;
 
     protected GroundCheck[] groundCheck;
@@ -14,8 +13,15 @@ public abstract class Enemy : MonoBehaviour
     protected float HP;
     protected float defense = 0;
     protected float attack;
+    protected float xp = 0;
 
+    protected bool isDead = false;
     protected bool isGrounded = false;
+
+    [SerializeField]
+    GameObject hpPotion;
+    [SerializeField]
+    GameObject manaPotion;
 
     protected abstract void Move();
     protected abstract void Death();
@@ -31,5 +37,16 @@ public abstract class Enemy : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void OnDestroy() {
+        PlayerData.CurrentXP += xp;
+        if (!PlayerData.IsInDream)
+        {
+            int potionHP = Random.Range(0, 6);
+            int potionMP = Random.Range(0, 6);
+            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.02f, Quaternion.identity);
+            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.02f, Quaternion.identity);
+        }
     }
 }

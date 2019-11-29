@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float dashForce;
 
+    SpriteRenderer playerSprite;
+    bool isHit = false;
+    float hitCounter = 0;
+    [SerializeField]
+    float hitTime;
+
     GroundCheck[] groundCheck;
     bool isGrounded = false;
 
@@ -34,6 +40,7 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         player = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
         mAnimator = GetComponent<Animator>();
         groundCheck = GetComponentsInChildren<GroundCheck>();
     }
@@ -57,10 +64,12 @@ public class PlayerController : MonoBehaviour {
             mAnimator.SetBool("isRunning", false);
         }
 
+        HitFlash();
         Attack();
         Death();
         Inputs();
         DreamWorld();
+        HandleLevelUp();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -153,6 +162,21 @@ public class PlayerController : MonoBehaviour {
 
     public void getHit(float damage) {
         PlayerData.CurrentHP -= damage;
+        isHit = true;
+    }
+
+    void HitFlash() {
+        if (isHit) {
+            hitCounter += Time.deltaTime;
+            if (hitCounter <= (1 / 3f) * hitTime) playerSprite.color = new Color(1, (140/255f), (140 / 255f), 1);
+            else if (hitCounter <= (2 / 3f) * hitTime) playerSprite.color = Color.white;
+            else if (hitCounter <= hitTime) playerSprite.color = new Color(1, (140 / 255f), (140 / 255f), 1);
+            else {
+                playerSprite.color = Color.white;
+                isHit = false;
+                hitCounter = 0;
+            }
+        }
     }
 
     //Checks if player is grounded
@@ -165,10 +189,18 @@ public class PlayerController : MonoBehaviour {
         return false;
     }
 
+    public void HandleLevelUp()
+    {
+        if (PlayerData.CurrentXP >= PlayerData.MaxXP)
+        {
+            PlayerData.CurrentLevel++;
+            PlayerData.LevelUpPoints++;
+            PlayerData.CurrentXP = 0;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Spike")) {
-            /*mAnimator.Play("Death");
-            player.constraints = RigidbodyConstraints2D.FreezeAll;*/
             PlayerData.CurrentHP = 0;
         }
     }

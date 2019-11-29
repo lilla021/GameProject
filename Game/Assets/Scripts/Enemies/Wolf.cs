@@ -27,6 +27,7 @@ public class Wolf : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
         groundCheck = GetComponentsInChildren<GroundCheck>();
@@ -35,6 +36,7 @@ public class Wolf : Enemy
         CurPos = transform.position.x;
         HP = 60;
         attack = 5;
+        xp = 5;
     }
 
     // Update is called once per frame
@@ -79,21 +81,21 @@ public class Wolf : Enemy
             }
         } else if (!PlayerData.IsInDream) {
             if (direction.magnitude > mArriveThreshold) {
-                transform.Translate(Vector2.right * (direction.x / Mathf.Abs(direction.x)) * mFollowSpeed * Time.deltaTime, Space.World);
+                transform.Translate(Vector2.right * Mathf.Sign(direction.x) * mFollowSpeed * Time.deltaTime, Space.World);
             } else {
                 transform.position = player.transform.position;
             }
 
-            Vector3 scale = new Vector3((direction.x / Mathf.Abs(direction.x)), transform.localScale.y, 0);
+            Vector3 scale = new Vector3( Mathf.Sign(direction.x), transform.localScale.y, 0);
             transform.localScale = scale;
         } else if (PlayerData.IsInDream) {
             if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
                 mAnimator.Play("PrepareJump");
             } else if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump")) {
-                mRigidbody.AddForce(new Vector2((direction.x / Mathf.Abs(direction.x)) * jumpXMultiplier, jumpYMultiplier), ForceMode2D.Impulse);
+                mRigidbody.AddForce(new Vector2(Mathf.Sign(direction.x) * jumpXMultiplier, jumpYMultiplier), ForceMode2D.Impulse);
             }
 
-            transform.localScale = new Vector3((direction.x / Mathf.Abs(direction.x)), transform.localScale.y, 0);
+            transform.localScale = new Vector3(Mathf.Sign(direction.x), transform.localScale.y, 0);
         }
     }
 
@@ -108,8 +110,9 @@ public class Wolf : Enemy
 
     override protected void Death()
     {
-        if(HP == 0f)
+        if(HP <= 0f)
         {
+            isDead = true;
             Destroy(gameObject);
         }
     }
