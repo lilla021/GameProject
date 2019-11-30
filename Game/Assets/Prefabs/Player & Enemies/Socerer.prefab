@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8800221243614809449}
   - component: {fileID: 8800221243614809455}
   - component: {fileID: 8800221243614809454}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Socerer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8800221243728988988}
   - component: {fileID: 8800221243728988991}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     protected float defense = 0;
     protected float attack;
     protected float xp = 0;
+    public float weight { get; protected set; } = 0;
 
     protected bool isDead = false;
     protected bool isGrounded = false;
@@ -39,7 +40,7 @@ public abstract class Enemy : MonoBehaviour
         return false;
     }
 
-    private void OnDestroy() {
+    protected void onDeath() {
         PlayerData.CurrentXP += xp;
         int potionHP = Random.Range(0, 6);
         int potionMP = Random.Range(0, 6);

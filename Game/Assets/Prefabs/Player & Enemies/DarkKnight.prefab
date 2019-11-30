@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1019944327}
   - component: {fileID: 1019944326}
   - component: {fileID: 1019944325}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DarkKnight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1917816671}
   - component: {fileID: 1917816672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DarkSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}

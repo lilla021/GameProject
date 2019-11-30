@@ -38,11 +38,6 @@ public class Spearman : Enemy
     // Update is called once per frame
     void Update()
     {
-        //Reset the constraints after using a dash.
-        if (mRigidbody.constraints == (RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation) && (Mathf.Abs(mRigidbody.velocity.x) <= speed * Time.fixedDeltaTime + 1)) {
-            mRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
-        }
-
         if (!isDead) {
             Move();
             Attack();
@@ -100,9 +95,14 @@ public class Spearman : Enemy
         }
     }
 
+    void resetConstraints() {
+        mRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             player.getHit(attack);
         }
     }
+
 }

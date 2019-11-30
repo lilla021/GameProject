@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7540478939793924905}
   - component: {fileID: 7540478939793924904}
   - component: {fileID: 7540478939793924909}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spearman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -168,10 +168,10 @@ MonoBehaviour:
     type: 3}
   speed: 3
   aggroRange: 10
-  attackRange: 2
+  attackRange: 2.5
   attackTime: 1.75
   dashRange: 7
-  dashForce: 15
+  dashForce: 50
 --- !u!1 &7540478941855640131
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540478941855640132}
   - component: {fileID: 7540478941855640133}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
