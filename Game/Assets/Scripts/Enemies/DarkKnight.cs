@@ -32,6 +32,7 @@ public class DarkKnight : Enemy
         HP = 100;
         attack = 10;
         xp = 10;
+        weight = 10;
     }
 
     // Update is called once per frame
@@ -80,7 +81,7 @@ public class DarkKnight : Enemy
 
     void IsInDream()
     {
-        if(PlayerData.IsInDream == true)
+        if(PlayerData.IsInDream && !isDead)
         {
             defense = 15f;
             ShieldOn = true;

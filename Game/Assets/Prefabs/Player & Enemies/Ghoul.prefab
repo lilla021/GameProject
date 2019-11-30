@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5950404113623328663}
   - component: {fileID: 5950404113623328748}
   - component: {fileID: 5950404113623328656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ghoul
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5950404113971258674}
   - component: {fileID: 5950404113971258673}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Claws
   m_TagString: Untagged
   m_Icon: {fileID: 0}

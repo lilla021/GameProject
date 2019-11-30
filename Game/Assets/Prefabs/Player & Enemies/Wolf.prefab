@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 345551466823256531}
   - component: {fileID: 345551466823256528}
   - component: {fileID: 345551466823256529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Wolf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2631731766947117396}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867970665022976273}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

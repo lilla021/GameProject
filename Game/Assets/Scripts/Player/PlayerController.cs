@@ -23,6 +23,15 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     float dashForce;
 
+    Camera cam;
+    GameObject currentSpell;
+    [SerializeField]
+    GameObject tornado;
+    [SerializeField]
+    GameObject wall;
+    [SerializeField]
+    GameObject arrow;
+
     SpriteRenderer playerSprite;
     bool isHit = false;
     float hitCounter = 0;
@@ -43,13 +52,14 @@ public class PlayerController : MonoBehaviour {
         playerSprite = GetComponent<SpriteRenderer>();
         mAnimator = GetComponent<Animator>();
         groundCheck = GetComponentsInChildren<GroundCheck>();
+        cam = Camera.main;
     }
 
     void Update() {
         //Store the current horizontal input in the float moveHorizontal.
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         //Flip the sprite when necessary.
-        if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity) {
+        if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity && !PlayerData.IsCasting) {
             transform.localScale = new Vector2(moveHorizontal, 1);           
             mAnimator.SetBool("isRunning", true);
         }
@@ -80,30 +90,32 @@ public class PlayerController : MonoBehaviour {
         mAnimator.SetBool("isGrounded", isGrounded);
 
         //Reset the constraints after using a dash.
-        if(player.constraints == (RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation) && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
+        if(player.constraints != RigidbodyConstraints2D.FreezeRotation && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
-        //Movement
-        if (!isAttack) {
-            Move();
-        }
+        if (!PlayerData.IsCasting) {
+            //Movement
+            if (!isAttack) {
+                Move();
+            }
 
-        //Jumping
-        if (isJumping && (isGrounded || (extraJump != 0 && doubleJump)) && !isAttack && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
-            Jump();
-        }
+            //Jumping
+            if (isJumping && (isGrounded || (extraJump != 0 && doubleJump)) && !isAttack) {
+                Jump();
+            }
 
-        //Dashing
-        if (isDashing && !isAttack) {
-            Dash();
+            //Dashing
+            if (isDashing && !isAttack) {
+                Dash();
+            }
         }
     }
 
     //Attacks when the button is pressed and the player ins't dashing or attacking.
     void Attack()
     {
-        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
+        if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1) && !PlayerData.IsCasting) {
             isAttack = Input.GetMouseButtonDown(0);
             mAnimator.SetBool("isAttack", isAttack);
         }
@@ -123,6 +135,18 @@ public class PlayerController : MonoBehaviour {
         isDashing = Input.GetButtonDown("Dash");
         if (Input.GetButtonDown("DreamWorld")) {
             PlayerData.IsInDream = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !PlayerData.IsCasting && isGrounded){
+            player.velocity = new Vector2(0, 0);
+            Spell(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !PlayerData.IsCasting && isGrounded) {
+            player.velocity = new Vector2(0, 0);
+            Spell(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !PlayerData.IsCasting && isGrounded) {
+            player.velocity = new Vector2(0, 0);
+            Spell(3);
         }
     }
 
@@ -160,7 +184,51 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void Spell(int spell) {
+        RaycastHit2D rayHit;
+        switch (spell) {
+            case 1:
+                rayHit = Physics2D.Raycast(transform.position + Vector3.up * 0.7f, Vector3.right * Mathf.Sign(transform.localScale.x), 2, LayerMask.GetMask("Ground"));
+                if (!rayHit) {
+                    rayHit = Physics2D.Raycast(transform.position + Vector3.up * 0.7f + Vector3.right * Mathf.Sign(transform.localScale.x) * 2, Vector3.down, 3, LayerMask.GetMask("Ground"));
+                    if (rayHit) {
+                        PlayerData.IsCasting = true;
+                        currentSpell = Instantiate(tornado, rayHit.point, Quaternion.identity);
+                        if (transform.localScale.x < 0) currentSpell.GetComponent<Tornado>().flip();
+                    }
+                }
+                break;
+            case 2:
+                Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 start = transform.position + Vector3.up * 0.7f;
+
+                rayHit = Physics2D.Raycast(start, (mousePos - start).normalized, (mousePos - start).magnitude, LayerMask.GetMask("Ground"));
+                if (!rayHit) {
+                    rayHit = Physics2D.Raycast(mousePos, Vector2.down, 10, LayerMask.GetMask("Ground"));
+                    if (rayHit) {
+                        PlayerData.IsCasting = true;
+                        currentSpell = Instantiate(wall, rayHit.point, Quaternion.identity);
+                    }
+                }
+                break;
+            case 3:
+                rayHit = Physics2D.Raycast(transform.position + Vector3.up * 0.7f, Vector3.right * Mathf.Sign(transform.localScale.x), 2, LayerMask.GetMask("Ground"));
+                if (!rayHit) {
+                    rayHit = Physics2D.Raycast(transform.position + Vector3.up * 0.7f + Vector3.right * Mathf.Sign(transform.localScale.x) * 2, Vector3.down, 3, LayerMask.GetMask("Ground"));
+                    if (rayHit) {
+                        PlayerData.IsCasting = true;
+                        currentSpell = Instantiate(arrow, rayHit.point + Vector2.up * 0.6f, Quaternion.identity);
+                    }
+                }
+                break;
+        }
+    }
+
     public void getHit(float damage) {
+        if (PlayerData.IsCasting) {
+            Destroy(currentSpell);
+            PlayerData.IsCasting = false;
+        }
         PlayerData.CurrentHP -= damage;
         isHit = true;
     }
@@ -202,6 +270,9 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Spike")) {
             PlayerData.CurrentHP = 0;
+        }
+        if (collision.CompareTag("Enemy")) {
+            player.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 }

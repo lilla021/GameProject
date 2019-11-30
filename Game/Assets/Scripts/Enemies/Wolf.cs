@@ -50,14 +50,14 @@ public class Wolf : Enemy
         if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Fall") || mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Land")) {
             mRun = false;
             mWalk = false;
-        }
-        else if (mFollow && !PlayerData.IsInDream)
+        } else if (mFollow && !PlayerData.IsInDream)
         {
             mRun = true;
-        }
-        else if (mFollow && PlayerData.IsInDream) {
+        } else if (mFollow && PlayerData.IsInDream) {
             mRun = false;
             mWalk = false;
+        } else {
+            mWalk = true;
         }
 
         UpdateAnimator();
@@ -92,6 +92,7 @@ public class Wolf : Enemy
             if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
                 mAnimator.Play("PrepareJump");
             } else if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump")) {
+                mRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
                 mRigidbody.AddForce(new Vector2(Mathf.Sign(direction.x) * jumpXMultiplier, jumpYMultiplier), ForceMode2D.Impulse);
             }
 
@@ -113,11 +114,16 @@ public class Wolf : Enemy
         if(HP <= 0f)
         {
             isDead = true;
+            onDeath();
             Destroy(gameObject);
         }
     }
 
     protected override void Attack() {
+    }
+
+    void resetConstraints() {
+        mRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

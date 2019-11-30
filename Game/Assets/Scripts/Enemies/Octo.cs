@@ -6,6 +6,7 @@ public class Octo : MonoBehaviour
 {
     [SerializeField]
     float mForce;
+    float attack;
 
     Rigidbody2D octo;
 
@@ -15,6 +16,7 @@ public class Octo : MonoBehaviour
     {
         octo = GetComponent<Rigidbody2D>();
         startPosition = octo.transform.position;
+        attack = 10;
     }
 
     // Update is called once per frame
@@ -28,5 +30,10 @@ public class Octo : MonoBehaviour
         }
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
+            PlayerController player = collision.GetComponent<PlayerController>();
+            player.getHit(attack);
+        }
+    }
 }

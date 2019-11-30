@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6618970759515192493}
   - component: {fileID: 6618970759515192492}
   - component: {fileID: 6618970759515192495}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Octo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

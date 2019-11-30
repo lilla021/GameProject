@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7486461659306144540}
   - component: {fileID: 6305064944994119602}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 1515478058230080359}
   - component: {fileID: 1025605056365325454}
   - component: {fileID: 2913360622178819609}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Archer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
