@@ -59,8 +59,14 @@ public class PlayerController : MonoBehaviour {
         //Store the current horizontal input in the float moveHorizontal.
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         //Flip the sprite when necessary.
-        if (moveHorizontal != 0 && !PlayerData.IsCasting) {
+        if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity && !PlayerData.IsCasting) {
             transform.localScale = new Vector2(moveHorizontal, 1);           
+            mAnimator.SetBool("isRunning", true);
+        }
+
+        else if (moveHorizontal != 0 && PlayerData.IsInReverseGravity)
+        {
+            transform.localScale = new Vector2(-moveHorizontal, 1);
             mAnimator.SetBool("isRunning", true);
         }
         else
@@ -73,6 +79,7 @@ public class PlayerController : MonoBehaviour {
         Death();
         Inputs();
         DreamWorld();
+        HandleLevelUp();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -248,6 +255,16 @@ public class PlayerController : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void HandleLevelUp()
+    {
+        if (PlayerData.CurrentXP >= PlayerData.MaxXP)
+        {
+            PlayerData.CurrentLevel++;
+            PlayerData.LevelUpPoints++;
+            PlayerData.CurrentXP = 0;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

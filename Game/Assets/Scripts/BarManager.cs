@@ -8,7 +8,7 @@ public class BarManager : MonoBehaviour
     public Image HP;
     public Image Mana;
     public Image DreamTimer;
-    //public Image XP;
+    public Image XP;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class BarManager : MonoBehaviour
     {
         HP.fillAmount = PlayerData.CurrentHP / PlayerData.MaxHP;
         Mana.fillAmount = PlayerData.CurrentMana / PlayerData.MaxMana;
-        // XP.fillAmount = PlayerData.CurrentXP / PlayerData.MaxXP;
+        XP.fillAmount = PlayerData.CurrentXP / PlayerData.MaxXP;
 
         DreamTimer.fillAmount = PlayerData.DreamTimerCurrentValue / PlayerData.DreamTimerMaxValue;
         if (PlayerData.DreamTimerCurrentValue == PlayerData.DreamTimerMaxValue)
