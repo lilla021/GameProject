@@ -12,6 +12,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected float HP;
     protected float defense = 0;
+    protected float Mdefense = 0;
     protected float attack;
     protected float xp = 0;
     protected int dropChance = 5; //Enemies will have 1/dropChance chance to drop each potions
@@ -31,7 +32,10 @@ public abstract class Enemy : MonoBehaviour
     public void getHit(float damage) {
         HP -= damage - defense;
     }
-
+    public void GetMagicHit(float damage)
+    {
+        HP -= damage - Mdefense;
+    }
     protected bool checkGrounded() {
         foreach (GroundCheck g in groundCheck) {
             if (g.CheckGrounded(0.35f, LayerMask.GetMask("Ground"), gameObject)) {
