@@ -29,6 +29,7 @@ public class Spearman : Enemy
         player = FindObjectOfType<PlayerController>();
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentsInChildren<GroundCheck>();
         HP = 75;
         attack = 15;
         xp = 5;
@@ -38,7 +39,8 @@ public class Spearman : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (!isDead) {
+        isGrounded = checkGrounded();
+        if (!isDead && isGrounded) {
             Move();
             Attack();
         }
@@ -84,6 +86,7 @@ public class Spearman : Enemy
 
     protected override void Death() {
         if (HP <= 0) {
+            isDead = true;
             mAnimator.Play("Death");
         }
     }

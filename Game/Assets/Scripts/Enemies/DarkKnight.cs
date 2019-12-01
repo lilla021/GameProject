@@ -29,6 +29,7 @@ public class DarkKnight : Enemy
         player = FindObjectOfType<PlayerController>();
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentsInChildren<GroundCheck>();
         HP = 100;
         attack = 10;
         xp = 10;
@@ -39,7 +40,8 @@ public class DarkKnight : Enemy
     void Update()
     {
         IsInDream();
-        if (!isDead) {
+        isGrounded = checkGrounded();
+        if (!isDead && isGrounded) {
             Move();
             Attack();
         }

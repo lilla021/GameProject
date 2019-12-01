@@ -37,9 +37,11 @@ public class Sorcerer : Enemy
     {
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentsInChildren<GroundCheck>();
         HP = 100;
         attack = 20;
         xp = 25;
+        weight = 25;
     }
 
     // Update is called once per frame
@@ -48,10 +50,12 @@ public class Sorcerer : Enemy
         SS = GameObject.Find("SwordSkeleton(Clone)");
         G = GameObject.Find("Ghoul(Clone)");
         UpdateAnimator();
-        Summon();
-        CheckMinions();
+        if (isGrounded) {
+            Summon();
+            CheckMinions();
+            IsInDream();
+        }
         Death();
-        IsInDream();
     }
 
 
@@ -127,6 +131,7 @@ public class Sorcerer : Enemy
     {
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
+        isGrounded = checkGrounded();
     }
 
     protected override void Attack()

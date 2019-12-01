@@ -14,17 +14,14 @@ public class SpawnerManager : MonoBehaviour
 
     public GameObject spawner;
 
-    public Rigidbody2D triggerBody;
-
     [SerializeField]
     float maxSpawnOffsetX;
     [SerializeField]
     float maxSpawnOffsetY;
-    [SerializeField]
-    float maxSpawnOffsetZ;
 
     [SerializeField]
     GameObject spawnPrefab;
+    List<GameObject> slimes;
 
     void Start()
     {
@@ -38,7 +35,7 @@ public class SpawnerManager : MonoBehaviour
             treasureSpawner = GameObject.FindGameObjectWithTag("EnemySpawner");
         }
         */
-
+        slimes = new List<GameObject>();
     }
 
     /*
@@ -65,33 +62,31 @@ public class SpawnerManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (triggerBody == null) return;
-
-        if(collision.attachedRigidbody == triggerBody)
+        if(collision.CompareTag("Player"))
         {
             if (Time.time > next)
             {
                 float spawnX = Random.Range(-maxSpawnOffsetX, maxSpawnOffsetX);
                 float spawnY = Random.Range(-maxSpawnOffsetY, maxSpawnOffsetY);
-                float spawnZ = Random.Range(-maxSpawnOffsetZ, maxSpawnOffsetZ);
-                Vector3 offset = new Vector3(spawnX, spawnY, spawnZ);
+                Vector3 offset = new Vector3(spawnX, spawnY, 0);
                 Vector3 spawnLocation = spawner.transform.position + offset;
 
                 GameObject prefab = Instantiate(spawnPrefab, spawnLocation, Quaternion.identity);
+                slimes.Add(prefab);
 
                 spawningRate = Random.Range(spawnRateMin, spawnRateMax);
                 next = Time.time + spawningRate;
             }
-
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        GameObject[] slimes = GameObject.FindGameObjectsWithTag("Slime");
-        foreach (GameObject slime in slimes)
-        {
-            Destroy(slime);
+        if (collision.CompareTag("Player")) {
+            foreach (GameObject slime in slimes) {
+                Destroy(slime);
+            }
+            slimes.Clear();
         }
     }
 
