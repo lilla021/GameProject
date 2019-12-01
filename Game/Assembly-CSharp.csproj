@@ -61,8 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BarManager.cs" />
+    <Compile Include="Assets\Scripts\CameraClamp.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DestroyMask.cs" />
+    <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\DialogPanelController.cs" />
+    <Compile Include="Assets\Scripts\DialogTrigger.cs" />
     <Compile Include="Assets\Scripts\DreamFilterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Enemies\Arrow.cs" />
@@ -95,6 +100,7 @@
     <Compile Include="Assets\Scripts\SpawnerManager.cs" />
     <Compile Include="Assets\Scripts\StatsMenuScript.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
+    <Compile Include="Assets\Scripts\TextTyper.cs" />
     <None Include="Assets\Sprites\UI pixelart Assets 4\Read Me.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/prisc/Desktop/Game/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
