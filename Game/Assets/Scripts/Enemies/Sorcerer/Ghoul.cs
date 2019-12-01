@@ -34,6 +34,7 @@ public class Ghoul : Enemy
         UpdateAnimator();
         Move();
         Attack();
+        IsInDream();
         Death();
     }
 
@@ -54,7 +55,7 @@ public class Ghoul : Enemy
                     transform.position = player.transform.position;
                 }
             }
-            transform.localScale = new Vector3(-(direction.x / Mathf.Abs(direction.x)), transform.localScale.y, 0);
+            transform.localScale = new Vector3(-Mathf.Sign(direction.x), transform.localScale.y, 0);
         }
     }
 
@@ -79,7 +80,16 @@ public class Ghoul : Enemy
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
     }
-   
+
+    void IsInDream()
+    {
+        if (PlayerData.IsInDream == true)
+        {
+            Sorcerer.GhoulSummon = false;
+            mAnimator.Play("Death");
+        }
+
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         

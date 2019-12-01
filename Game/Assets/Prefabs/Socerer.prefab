@@ -117,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a2f81cbfbcd1f4388eef7d842149b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   SS: {fileID: 0}
   G: {fileID: 0}
   mFollowSpeed: 2
@@ -126,6 +125,7 @@ MonoBehaviour:
   Sword: {fileID: 7899200359970394623, guid: c6726598cf9084345811b82ece94f4aa, type: 3}
   Ghouls: {fileID: 5950404113623328749, guid: d07c26fac70432a42ae4f7705f4f0c37, type: 3}
   mAttackRange: 4.5
+  mDefRange: 5.5
   SwordCount: 0
   GhoulCount: 0
 --- !u!95 &8800221243614809455

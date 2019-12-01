@@ -20,6 +20,8 @@ public class Sorcerer : Enemy
     GameObject Ghouls;
     [SerializeField]
     float mAttackRange;
+    [SerializeField]
+    float mDefRange;
 
     public static bool SwordSummon;
     public static bool GhoulSummon;
@@ -30,11 +32,14 @@ public class Sorcerer : Enemy
     float mArriveThreshold = 0.05f;
     bool follow;
     bool isAttack = false;
+    bool isDefend = false;
+    bool isSummon;
 
     Vector2 direction;
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
         HP = 100;
@@ -48,6 +53,7 @@ public class Sorcerer : Enemy
         G = GameObject.Find("Ghoul(Clone)");
         UpdateAnimator();
         Summon();
+        Defend();
         CheckMinions();
         Death();
         IsInDream();
@@ -64,30 +70,36 @@ public class Sorcerer : Enemy
                 if (SwordSummon == false && SwordCount == 0)
                 {
                     SwordSummon = true;
+                    isSummon = true;
                     Instantiate(Sword, transform.position + new Vector3(-5, 0, 0), Quaternion.identity);
                     SwordCount = 1;
-
                 }
                 if (GhoulSummon == false && GhoulCount == 0)
                 {
                     GhoulSummon = true;
+                    isSummon = true;
                     Instantiate(Ghouls, transform.position + new Vector3(5, 0, 0), Quaternion.identity);
                     GhoulCount = 1;
                 }
             }
+            else
+            {
+                isSummon = false;
+            }
+            transform.localScale = new Vector3(Mathf.Sign(direction.x), transform.localScale.y, 0);
         }
     }
 
     void CheckMinions()
     {
-        if(SS == null)
+        if (SS == null)
         {
             SwordCount = 0;
         }
-        if(G == null)
+        if (G == null)
         {
             GhoulCount = 0;
-        }
+        }     
     }
 
     protected override void Move()
@@ -126,13 +138,18 @@ public class Sorcerer : Enemy
     {
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
+        mAnimator.SetBool("isDefend", isDefend);
+        mAnimator.SetBool("isSummon", isSummon);
     }
 
     protected override void Attack()
     {
         isAttack = direction.magnitude <= mAttackRange;
     }
-
+    void Defend()
+    {
+        isDefend = direction.magnitude <= mDefRange;
+    }
 
     void OnDrawGizmosSelected()
     {

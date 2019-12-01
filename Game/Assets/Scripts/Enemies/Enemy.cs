@@ -12,6 +12,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected float HP;
     protected float defense = 0;
+    protected float Mdefense = 0;
     protected float attack;
 
     protected bool isDead = false;
@@ -23,7 +24,10 @@ public abstract class Enemy : MonoBehaviour
     public void getHit(float damage) {
         HP -= damage - defense;
     }
-
+    public void GetMagicHit(float damage)
+    {
+        HP -= damage - Mdefense;
+    }
     protected bool checkGrounded() {
         foreach (GroundCheck g in groundCheck) {
             if (g.CheckGrounded(0.35f, LayerMask.GetMask("Ground"), gameObject)) {

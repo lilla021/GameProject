@@ -32,11 +32,11 @@ public class SwordSkeleton : Enemy
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
         UpdateAnimator();
         Move();
         Attack();
+        IsInDream();
         Death();
     }
 
@@ -57,7 +57,7 @@ public class SwordSkeleton : Enemy
                     transform.position = player.transform.position;
                 }
             }
-            transform.localScale = new Vector3((direction.x / Mathf.Abs(direction.x)), transform.localScale.y, 0);
+            transform.localScale = new Vector3(Mathf.Sign(direction.x), transform.localScale.y, 0);
         }
     }
 
@@ -81,7 +81,15 @@ public class SwordSkeleton : Enemy
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
     }
-   
+    void IsInDream()
+    {
+        if (PlayerData.IsInDream == true)
+        {
+            Sorcerer.SwordSummon = false;
+            mAnimator.Play("Death");
+        }
+
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
 
