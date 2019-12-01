@@ -25,6 +25,7 @@ public class Archer : Enemy
         player = FindObjectOfType<PlayerController>();
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentsInChildren<GroundCheck>();
         HP = 40;
         xp = 5;
         attackCounter = attackTime;
@@ -33,7 +34,8 @@ public class Archer : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (!isDead) {
+        isGrounded = checkGrounded();
+        if (!isDead && isGrounded) {
             Move();
             Attack();
         }

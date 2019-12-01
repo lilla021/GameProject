@@ -24,6 +24,7 @@ public class Ghoul : Enemy
         me = GameObject.Find("Player");
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponentsInChildren<GroundCheck>();
         HP = 100;
         attack = 1f;
     }
@@ -32,8 +33,10 @@ public class Ghoul : Enemy
     void Update()
     {
         UpdateAnimator();
-        Move();
-        Attack();
+        if (isGrounded) {
+            Move();
+            Attack();
+        }
         Death();
     }
 
@@ -78,6 +81,7 @@ public class Ghoul : Enemy
     {
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
+        isGrounded = checkGrounded();
     }
    
     void OnTriggerEnter2D(Collider2D collision)

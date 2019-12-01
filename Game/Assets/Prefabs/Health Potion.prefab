@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8618365928913014507}
   - component: {fileID: 985243038758474308}
   - component: {fileID: 7783585222165867696}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Health Potion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
