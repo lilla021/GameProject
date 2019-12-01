@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     protected float defense = 0;
     protected float attack;
     protected float xp = 0;
+    protected int dropChance = 5; //Enemies will have 1/dropChance chance to drop each potions
     public float weight { get; protected set; } = 0;
 
     protected bool isDead = false;
@@ -44,10 +45,10 @@ public abstract class Enemy : MonoBehaviour
         PlayerData.CurrentXP += xp;
         if (!PlayerData.IsInDream)
         {
-            int potionHP = Random.Range(0, 6);
-            int potionMP = Random.Range(0, 6);
-            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.02f, Quaternion.identity);
-            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.02f, Quaternion.identity);
+            int potionHP = Random.Range(0, dropChance);
+            int potionMP = Random.Range(0, dropChance);
+            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.02f + Vector3.up * 0.2f, Quaternion.identity);
+            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.02f + Vector3.up * 0.2f, Quaternion.identity);
         }
     }
 }

@@ -31,6 +31,7 @@ public class Tornado : Spell
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
+            Debug.Log(collision.name);
             knockUp(collision.GetComponent<Enemy>());
         }
     }

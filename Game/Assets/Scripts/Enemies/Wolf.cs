@@ -21,7 +21,7 @@ public class Wolf : Enemy
 
     public float min = 2f;
     public float max = 3f;
-    public float CurPos;
+    float CurPos;
     float mArriveThreshold = 0.05f;
 
     // Start is called before the first frame update
@@ -59,7 +59,7 @@ public class Wolf : Enemy
         } else {
             mWalk = true;
         }
-
+        
         UpdateAnimator();
         Move();
         Attack();
