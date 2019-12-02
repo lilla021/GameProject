@@ -1,19 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    private Queue<string> sentences;
+    public Text dialogText;
+    public float letterPause = 0.1f;
+    public int actionCount = 0;
+    
+    public bool isTutorial;
+    public bool isForest;
+    public bool isCave;
+
+    Animator mAnimator;
+
+    //public AudioClip textSound;
+    //public AudioClip clickSound;
+
+    GameObject dialogPanel;
+    GameObject player;
+
+    private Queue<string> sentences = new Queue<string>();
+
     void Awake()
     {
+        dialogPanel = GameObject.FindWithTag("DialogPanel");
+        player = GameObject.FindWithTag("Player");
+        player.GetComponent<Animator>().enabled = false;
         sentences = new Queue<string>();
-
     }
+
     public void StartDialog(Dialog dialog)
     {
-        Debug.Log("test dialog" + dialog.dialog);
-
         sentences.Clear();
         foreach (string sentence in dialog.sentences)
         {
@@ -22,9 +41,10 @@ public class DialogManager : MonoBehaviour
 
         DisplayNextSentence();
     }
-
+  
     public void DisplayNextSentence()
     {
+        player.GetComponent<Animator>().enabled = false;
         if (sentences.Count == 0)
         {
             EndDialog();
@@ -32,12 +52,27 @@ public class DialogManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+        StopAllCoroutines();
+        StartCoroutine(TypeText(sentence));
     }
 
+    IEnumerator TypeText(string sentence)
+    {
+        dialogText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            
+            dialogText.text += letter;
+            // if (typeSound1 && typeSound2)
+            //    SoundManager.instance.RandomizeSfx(typeSound1, typeSound2);
+            yield return 0;
+            yield return new WaitForSeconds(letterPause);
+        }
+    }
     void EndDialog()
     {
-        Debug.Log("End convo");
+        dialogPanel.GetComponent<Animator>().SetBool("disappear", true);
+        player.GetComponent<Animator>().enabled = true;
     }
 }
   
