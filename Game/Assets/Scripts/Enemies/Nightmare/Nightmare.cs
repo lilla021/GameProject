@@ -33,6 +33,8 @@ public class Nightmare : Enemy
     [SerializeField]
     float mAttackRange;
     [SerializeField]
+    float mChaseRange;
+    [SerializeField]
     float mBoltRange;
     [SerializeField]
     public bool isRaze1;
@@ -68,36 +70,25 @@ public class Nightmare : Enemy
     // Update is called once per frame
     void Update()
     {
-
+        if(HP <= 30)
+        {
+            //mAnimator.Play("IdleFrenzy");
+            mAnimator.SetTrigger("Stage2");
+        }
         One = GameObject.Find("ShadowRaze1(Clone)");
         Two = GameObject.Find("ShadowRaze2(Clone)");
         Three = GameObject.Find("ShadowRaze3(Clone)");
         Firebolt = GameObject.Find("DarkFireBolt(Clone)");
-        //if (Input.GetKeyDown(KeyCode.B))
-        //{
-        //    
-        //}
-        //if (Input.GetKeyDown(KeyCode.T))
-        //{
-        //    Teleport();
-        //}
-        //if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    StartCoroutine("Silence");
-        //}
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    DarkFire();
-        //}
-        //if (Input.GetKeyDown(KeyCode.C))
-        //{
-        //    StartCoroutine("Requiem");
-        //}
-        
-        //UpdateAnimator();
-        //Death();
+        if(!(PlayerData.IsInDream == true && HP <= 30))
+        {
+            Move();
+        }
+
         IsInDream();
         NotInDream();
+        UpdateAnimator();
+        Death();
+        
     }
 
 
@@ -108,9 +99,8 @@ public class Nightmare : Enemy
         follow = direction.magnitude <= mFollowRange;
         if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") && !mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
-            if (!PlayerData.IsInDream && follow)
+            if (follow)
             {
-                Debug.Log("move");
                 if (direction.magnitude > mArriveThreshold)
                 {
                     transform.Translate(direction.normalized * mFollowSpeed * Time.deltaTime);
@@ -124,26 +114,33 @@ public class Nightmare : Enemy
         }
     }
 
-    void Chase()
-    {
-        direction = player.transform.position - transform.position;
-        if (direction.magnitude > mArriveThreshold)
-        {
-            transform.Translate(direction.normalized * 6 * Time.deltaTime);
-        }
-        else
-        {
-            transform.position = player.transform.position;
-        }
-        transform.localScale = new Vector3(-Mathf.Sign(direction.x), transform.localScale.y, 0);
-    }
+    //void Chase()
+    //{
+    //    follow = direction.magnitude <= mChaseRange;
+    //    direction = player.transform.position - transform.position;
+    //    if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") && !mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+    //    {
+    //        if (!PlayerData.IsInDream && follow)
+    //        {
+    //            if (direction.magnitude > mArriveThreshold)
+    //            {
+    //                transform.Translate(direction.normalized * 6 * Time.deltaTime);
+    //            }
+    //            else
+    //            {
+    //                transform.position = player.transform.position;
+    //            }
+    //        }
+    //        transform.localScale = new Vector3(-(direction.x / Mathf.Abs(direction.x)), transform.localScale.y, 0);
+    //    }
+    //}
 
-    void Teleport()
-    {
-        transform.position = transform.localScale.x < player.transform.localScale.x ? player.transform.position + new Vector3(5f, 0, 0) * transform.localScale.x : player.transform.position + new Vector3(-5f, 0, 0) * transform.localScale.x;
-        //yield return new WaitForSeconds(7f);
-        //StartCoroutine("Teleport");
-    }
+    //void Teleport()
+    //{
+    //    transform.position = transform.localScale.x < player.transform.localScale.x ? player.transform.position + new Vector3(5f, 0, 0) * transform.localScale.x : player.transform.position + new Vector3(-5f, 0, 0) * transform.localScale.x;
+    //    //yield return new WaitForSeconds(7f);
+    //    //StartCoroutine("Teleport");
+    //}
 
     void DarkFire()
     {
@@ -270,6 +267,7 @@ public class Nightmare : Enemy
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, mFollowRange);
+        Gizmos.DrawWireSphere(transform.position, mChaseRange);
         Gizmos.DrawWireSphere(transform.position, mAttackRange);
         Gizmos.DrawWireSphere(transform.position, mBoltRange);
     }
@@ -292,7 +290,6 @@ public class Nightmare : Enemy
             defense = 3;
             DarkFire();
             StartCoroutine("Raze_0");
-            Move();
         }
         if(PlayerData.IsInDream == true && HP <= 30)
         {
@@ -304,7 +301,6 @@ public class Nightmare : Enemy
                 StartCoroutine("Requiem");
             }
             DarkFire();
-            Move();
         }
 
     }
@@ -317,19 +313,19 @@ public class Nightmare : Enemy
             mFollowSpeed = 5f;
             Mdefense = 3;
             defense = 7;
-            Move();
             Attack();
             StartCoroutine("Silence");
         }
         if (PlayerData.IsInDream == false && HP <= 30)
         {
-            ResetSoul();
-            mAnimator.Play("IdleFrenzy");
+            mFollowRange = 20;
+            mFollowSpeed = 8;
+            ResetSoul();            
             attack = 8;
             Mdefense = 3;
             defense = 4;
             Attack();
-            Chase();
+            
         }
     }
 }
