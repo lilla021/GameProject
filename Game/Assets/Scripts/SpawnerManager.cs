@@ -11,6 +11,7 @@ public class SpawnerManager : MonoBehaviour
 
     private float spawningRate;
     private float next = 0;
+    
 
     public GameObject spawner;
 
@@ -76,6 +77,7 @@ public class SpawnerManager : MonoBehaviour
 
                 spawningRate = Random.Range(spawnRateMin, spawnRateMax);
                 next = Time.time + spawningRate;
+                
             }
         }
     }
@@ -88,6 +90,19 @@ public class SpawnerManager : MonoBehaviour
             }
             slimes.Clear();
         }
+    }
+
+    public void SetRate(float min, float max)
+    {
+        if (100 - spawnRateMin < 1)
+        {
+            spawnRateMin = min;
+            spawnRateMax = max;
+            spawningRate = Random.Range(spawnRateMin, spawnRateMax);
+            next = spawningRate;
+            Debug.Log("Chanaged spawning rate");
+        }
+
     }
 
 }
