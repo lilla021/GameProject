@@ -71,9 +71,15 @@
     <Compile Include="Assets\Scripts\DreamFilterScript.cs" />
     <Compile Include="Assets\Scripts\Enemies\Archer.cs" />
     <Compile Include="Assets\Scripts\Enemies\Arrow.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Crab.cs" />
     <Compile Include="Assets\Scripts\Enemies\DarkKnight.cs" />
     <Compile Include="Assets\Scripts\Enemies\DeathAnim.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Nightmare\DarkFireBolt.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Nightmare\Nightmare.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Nightmare\Raze.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Nightmare\RazeAnim.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Nightmare\RequeimOfSouls.cs" />
     <Compile Include="Assets\Scripts\Enemies\Octo.cs" />
     <Compile Include="Assets\Scripts\Enemies\Slime.cs" />
     <Compile Include="Assets\Scripts\Enemies\Sorcerer\Ghoul.cs" />
@@ -103,19 +109,19 @@
     <Compile Include="Assets\Scripts\TextTyper.cs" />
     <None Include="Assets\Sprites\UI pixelart Assets 4\Read Me.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -319,13 +325,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.1f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/prisc/Desktop/hi/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/prisc/Desktop/Game_Project/GameProject/Game/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

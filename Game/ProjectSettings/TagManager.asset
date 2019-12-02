@@ -10,6 +10,8 @@ TagManager:
   - RockManager
   - RockSpawner
   - Ceiling
+  - DialogPanel
+  - Crab
   layers:
   - Default
   - TransparentFX
