@@ -13,7 +13,11 @@ public class Tornado : Spell
     void Start()
     {
         manaCost = 10;
-        PlayerData.CurrentMana -= manaCost;
+        if (PlayerData.CurrentMana >= manaCost) PlayerData.CurrentMana -= manaCost;
+        else {
+            PlayerData.IsCasting = false;
+            Destroy(gameObject);
+        }
         lifespan = 3;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();

@@ -15,7 +15,11 @@ public class ArrowSpell : Spell
     void Start()
     {
         manaCost = 35;
-        PlayerData.CurrentMana -= manaCost;
+        if (PlayerData.CurrentMana >= manaCost) PlayerData.CurrentMana -= manaCost;
+        else {
+            PlayerData.IsCasting = false;
+            Destroy(gameObject);
+        }
         lifespan = 5;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -36,8 +40,7 @@ public class ArrowSpell : Spell
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Enemy")) {
-            //TODO : change to magic damaga
-            collision.GetComponent<Enemy>().getHit(attack);
+            collision.GetComponent<Enemy>().GetMagicHit(attack);
             Destroy(gameObject);
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {

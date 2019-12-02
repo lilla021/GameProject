@@ -22,7 +22,7 @@ public class Wolf : Enemy
     public float min = 2f;
     public float max = 3f;
     float CurPos;
-    float mArriveThreshold = 0.05f;
+    float attackRange = 1.75f;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +53,7 @@ public class Wolf : Enemy
         } else if (mFollow && !PlayerData.IsInDream)
         {
             mRun = true;
+            mWalk = false;
         } else if (mFollow && PlayerData.IsInDream) {
             mRun = false;
             mWalk = false;
@@ -80,13 +81,11 @@ public class Wolf : Enemy
                 transform.localScale = new Vector2(-1, transform.localScale.y);
             }
         } else if (!PlayerData.IsInDream) {
-            if (direction.magnitude > mArriveThreshold) {
-                transform.Translate(Vector2.right * Mathf.Sign(direction.x) * mFollowSpeed * Time.deltaTime, Space.World);
-            } else {
-                transform.position = player.transform.position;
+            if (direction.magnitude > attackRange) {
+                transform.Translate(Vector2.right * Mathf.Sign(direction.x) * mFollowSpeed * Time.deltaTime);
             }
 
-            Vector3 scale = new Vector3( Mathf.Sign(direction.x), transform.localScale.y, 0);
+            Vector3 scale = new Vector3(Mathf.Sign(direction.x), transform.localScale.y, 0);
             transform.localScale = scale;
         } else if (PlayerData.IsInDream) {
             if (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
@@ -120,16 +119,16 @@ public class Wolf : Enemy
     }
 
     protected override void Attack() {
+        if (direction.magnitude <= attackRange && isGrounded) mAnimator.Play("Attack");
     }
 
     void resetConstraints() {
         mRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag("Player") && (mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Run") || mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Fall"))) {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.CompareTag("Player")) {
             player.getHit(attack);
         }
     }
-
 }

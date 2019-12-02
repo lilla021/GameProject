@@ -259,6 +259,6 @@ MonoBehaviour:
     type: 3}
   arrow: {fileID: 161332001554701801, guid: 9ad95dfee2acc894590efed456791bfb, type: 3}
   range: 20
-  runRange: 2
+  runRange: 3
   attackTime: 3
   maxSpeed: 5

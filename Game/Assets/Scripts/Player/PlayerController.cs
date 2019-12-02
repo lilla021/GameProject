@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
     SpriteRenderer playerSprite;
     bool isHit = false;
     float hitCounter = 0;
+    bool dead = false;
     [SerializeField]
     float hitTime;
 
@@ -56,65 +57,63 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update() {
-        //Store the current horizontal input in the float moveHorizontal.
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        //Flip the sprite when necessary.
-        if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity && !PlayerData.IsCasting) {
-            transform.localScale = new Vector2(moveHorizontal, 1);           
-            mAnimator.SetBool("isRunning", true);
-        }
+        if (!dead) {
+            //Store the current horizontal input in the float moveHorizontal.
+            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            //Flip the sprite when necessary.
+            if (moveHorizontal != 0 && !PlayerData.IsInReverseGravity && !PlayerData.IsCasting) {
+                transform.localScale = new Vector2(moveHorizontal, 1);
+                mAnimator.SetBool("isRunning", true);
+            } else if (moveHorizontal != 0 && PlayerData.IsInReverseGravity) {
+                transform.localScale = new Vector2(-moveHorizontal, 1);
+                mAnimator.SetBool("isRunning", true);
+            } else {
+                mAnimator.SetBool("isRunning", false);
+            }
 
-        else if (moveHorizontal != 0 && PlayerData.IsInReverseGravity)
-        {
-            transform.localScale = new Vector2(-moveHorizontal, 1);
-            mAnimator.SetBool("isRunning", true);
+            HitFlash();
+            Attack();
+            Death();
+            Inputs();
+            DreamWorld();
+            HandleLevelUp();
         }
-        else
-        {
-            mAnimator.SetBool("isRunning", false);
-        }
-
-        HitFlash();
-        Attack();
-        Death();
-        Inputs();
-        DreamWorld();
-        HandleLevelUp();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate() {
-        //Check if the player is grounded, set the animation and reset the double jump.
-        isGrounded = checkGrounded();
-        if (isGrounded) extraJump = 1;
-        mAnimator.SetBool("isGrounded", isGrounded);
+        if (!dead) {
+            //Check if the player is grounded, set the animation and reset the double jump.
+            isGrounded = checkGrounded();
+            if (isGrounded) extraJump = 1;
+            mAnimator.SetBool("isGrounded", isGrounded);
 
-        //Reset the constraints after using a dash.
-        if(player.constraints != RigidbodyConstraints2D.FreezeRotation && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
-            player.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
-
-        if (!PlayerData.IsCasting) {
-            //Movement
-            if (!isAttack) {
-                Move();
+            //Reset the constraints after using a dash.
+            if (player.constraints != RigidbodyConstraints2D.FreezeRotation && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1)) {
+                player.constraints = RigidbodyConstraints2D.FreezeRotation;
             }
 
-            //Jumping
-            if (isJumping && (isGrounded || (extraJump != 0 && doubleJump)) && !isAttack) {
-                Jump();
-            }
+            if (!PlayerData.IsCasting) {
+                //Movement
+                if (!isAttack) {
+                    Move();
+                }
 
-            //Dashing
-            if (isDashing && !isAttack) {
-                Dash();
+                //Jumping
+                if (isJumping && (isGrounded || (extraJump != 0 && doubleJump)) && !isAttack) {
+                    Jump();
+                }
+
+                //Dashing
+                if (isDashing && !isAttack) {
+                    Dash();
+                }
             }
         }
     }
 
     //Attacks when the button is pressed and the player ins't dashing or attacking.
-    void Attack()
-    {
+    void Attack() {
         if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1) && !PlayerData.IsCasting) {
             isAttack = Input.GetMouseButtonDown(0);
             mAnimator.SetBool("isAttack", isAttack);
@@ -125,7 +124,8 @@ public class PlayerController : MonoBehaviour {
     void Death() {
         if (PlayerData.CurrentHP <= 0) {
             mAnimator.Play("Death");
-            player.constraints = RigidbodyConstraints2D.FreezeAll;
+            dead = true;
+            player.velocity = Vector2.zero;
         }
     }
 
@@ -136,17 +136,19 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("DreamWorld")) {
             PlayerData.IsInDream = true;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !PlayerData.IsCasting && isGrounded){
-            player.velocity = new Vector2(0, 0);
-            Spell(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !PlayerData.IsCasting && isGrounded) {
-            player.velocity = new Vector2(0, 0);
-            Spell(2);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && !PlayerData.IsCasting && isGrounded) {
-            player.velocity = new Vector2(0, 0);
-            Spell(3);
+        if (!PlayerData.IsCasting && isGrounded && !isAttack) {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                player.velocity = new Vector2(0, 0);
+                Spell(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2)) {
+                player.velocity = new Vector2(0, 0);
+                Spell(2);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3)) {
+                player.velocity = new Vector2(0, 0);
+                Spell(3);
+            }
         }
     }
 
@@ -236,7 +238,7 @@ public class PlayerController : MonoBehaviour {
     void HitFlash() {
         if (isHit) {
             hitCounter += Time.deltaTime;
-            if (hitCounter <= (1 / 3f) * hitTime) playerSprite.color = new Color(1, (140/255f), (140 / 255f), 1);
+            if (hitCounter <= (1 / 3f) * hitTime) playerSprite.color = new Color(1, (140 / 255f), (140 / 255f), 1);
             else if (hitCounter <= (2 / 3f) * hitTime) playerSprite.color = Color.white;
             else if (hitCounter <= hitTime) playerSprite.color = new Color(1, (140 / 255f), (140 / 255f), 1);
             else {
@@ -257,10 +259,8 @@ public class PlayerController : MonoBehaviour {
         return false;
     }
 
-    public void HandleLevelUp()
-    {
-        if (PlayerData.CurrentXP >= PlayerData.MaxXP)
-        {
+    public void HandleLevelUp() {
+        if (PlayerData.CurrentXP >= PlayerData.MaxXP) {
             PlayerData.CurrentLevel++;
             PlayerData.LevelUpPoints++;
             PlayerData.CurrentXP = 0;
