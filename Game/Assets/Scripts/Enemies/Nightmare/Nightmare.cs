@@ -162,23 +162,23 @@ public class Nightmare : Enemy
     IEnumerator Requiem()
     {
         Vector3 position = transform.localScale.x < 0 ? transform.position + new Vector3(0.35f, 0.1f, 0) * transform.localScale.x : transform.position + new Vector3(0.35f, -0.1f, 0) * transform.localScale.x;
-        if (Soul1 == false)
+        if (Soul1 == false && PlayerData.IsInDream == true)
             Instantiate(Souls, position + new Vector3(-4, 5, 0), bolt.transform.rotation);
         Soul1 = true;
         yield return new WaitForSeconds(1f);
-        if(Soul2 == false)
+        if(Soul2 == false && PlayerData.IsInDream == true)
             Instantiate(Souls, position + new Vector3(-2, 6, 0), bolt.transform.rotation);
         Soul2 = true;
         yield return new WaitForSeconds(1f);
-        if(Soul3 == false)
+        if(Soul3 == false && PlayerData.IsInDream == true)
             Instantiate(Souls, position + new Vector3(0, 6.5f, 0), bolt.transform.rotation);
         Soul3 = true;
         yield return new WaitForSeconds(1f);
-        if(Soul4 == false)
+        if(Soul4 == false && PlayerData.IsInDream == true)
             Instantiate(Souls, position + new Vector3(2, 6, 0), bolt.transform.rotation);
         Soul4 = true;
         yield return new WaitForSeconds(1f);
-        if(Soul5 == false)
+        if(Soul5 == false && PlayerData.IsInDream == true)
             Instantiate(Souls, position + new Vector3(4, 5, 0), bolt.transform.rotation);
         Soul5 = true;
     }

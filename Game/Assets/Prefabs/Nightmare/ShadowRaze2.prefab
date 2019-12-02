@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 464f6e81156ab0e499c4ae6e9e820406, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,6 +113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e571914f1fc8cfb459bbb3fcc270aebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpPotion: {fileID: 0}
+  manaPotion: {fileID: 0}
 --- !u!70 &6189946997595680778
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
