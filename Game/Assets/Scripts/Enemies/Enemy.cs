@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
-{
+public abstract class Enemy : MonoBehaviour {
     protected PlayerController player;
 
     protected GroundCheck[] groundCheck;
@@ -32,8 +31,7 @@ public abstract class Enemy : MonoBehaviour
     public void getHit(float damage) {
         HP -= damage - defense;
     }
-    public void GetMagicHit(float damage)
-    {
+    public void GetMagicHit(float damage) {
         HP -= damage - Mdefense;
     }
     protected bool checkGrounded() {
@@ -47,12 +45,11 @@ public abstract class Enemy : MonoBehaviour
 
     protected void onDeath() {
         PlayerData.CurrentXP += xp;
-        if (!PlayerData.IsInDream)
-        {
+        if (!PlayerData.IsInDream) {
             int potionHP = Random.Range(0, dropChance);
             int potionMP = Random.Range(0, dropChance);
-            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.02f + Vector3.up * 0.2f, Quaternion.identity);
-            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.02f + Vector3.up * 0.2f, Quaternion.identity);
+            if (potionHP == 1) Instantiate(hpPotion, transform.position - Vector3.right * 0.2f + Vector3.up * 0.2f, Quaternion.identity);
+            if (potionMP == 1) Instantiate(manaPotion, transform.position + Vector3.right * 0.2f + Vector3.up * 0.2f, Quaternion.identity);
         }
     }
 }

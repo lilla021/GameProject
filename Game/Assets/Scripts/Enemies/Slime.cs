@@ -10,7 +10,7 @@ public class Slime : Enemy {
     float mFollowRange;
     Vector2 direction;
 
-    float attackRange = 1.4f;
+    float attackRange = 1.5f;
 
     private void Start() {
         player = FindObjectOfType<PlayerController>();

@@ -8,7 +8,11 @@ public class Wall : Spell
     void Start()
     {
         manaCost = 25;
-        PlayerData.CurrentMana -= manaCost;
+        if (PlayerData.CurrentMana >= manaCost) PlayerData.CurrentMana -= manaCost;
+        else {
+            PlayerData.IsCasting = false;
+            Destroy(gameObject);
+        }
         lifespan = 5;
         anim = GetComponent<Animator>();
     }

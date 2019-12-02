@@ -53,7 +53,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 70
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +68,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -79,7 +79,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -95,10 +95,10 @@ TextureImporter:
       name: wolf_attack_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 38
-        width: 90
-        height: 48
+        x: 44
+        y: 76
+        width: 180
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,7 +106,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e31177ec4873274abb7d88eb7720077
+      spriteID: 55e102b2645aa8243b9e2a68357c74dd
       vertices: []
       indices: 
       edges: []
@@ -115,10 +115,10 @@ TextureImporter:
       name: wolf_attack_1
       rect:
         serializedVersion: 2
-        x: 158
-        y: 38
-        width: 84
-        height: 48
+        x: 316
+        y: 76
+        width: 168
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 307437137230c2049824217892377e8e
+      spriteID: 0ad93fb7556f8bc418dcd92c99c4ad29
       vertices: []
       indices: 
       edges: []
@@ -135,10 +135,10 @@ TextureImporter:
       name: wolf_attack_2
       rect:
         serializedVersion: 2
-        x: 290
-        y: 40
-        width: 86
-        height: 44
+        x: 580
+        y: 80
+        width: 172
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d218cb173f113444bfa3b50f369134d
+      spriteID: de2e97502d952ac45972dcac6a39cce3
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: wolf_attack_3
       rect:
         serializedVersion: 2
-        x: 416
-        y: 40
-        width: 88
-        height: 56
+        x: 832
+        y: 80
+        width: 176
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9b0416b94a48074da1ab1fa18822caf
+      spriteID: d48714e14fce5a04287710ac0a75fc4e
       vertices: []
       indices: 
       edges: []
@@ -175,10 +175,10 @@ TextureImporter:
       name: wolf_attack_4
       rect:
         serializedVersion: 2
-        x: 542
-        y: 54
-        width: 88
-        height: 50
+        x: 1084
+        y: 108
+        width: 176
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,7 +186,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47f4fd77e31b4d24fad84e8691ef7d02
+      spriteID: 411c23e18d9806d49848f693c756b011
       vertices: []
       indices: 
       edges: []
@@ -195,10 +195,10 @@ TextureImporter:
       name: wolf_attack_5
       rect:
         serializedVersion: 2
-        x: 662
-        y: 44
-        width: 94
-        height: 48
+        x: 1324
+        y: 88
+        width: 188
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,7 +206,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e976858649a8c94ab66b5fbb46a90c1
+      spriteID: 916715ad1abf6674da58226a2c1392e1
       vertices: []
       indices: 
       edges: []
@@ -215,10 +215,10 @@ TextureImporter:
       name: wolf_attack_6
       rect:
         serializedVersion: 2
-        x: 792
-        y: 38
-        width: 90
-        height: 50
+        x: 1584
+        y: 76
+        width: 180
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3261cc7d56430704195e81e5477ccd49
+      spriteID: 9eb9774d70998ae47a4b6582b88d5906
       vertices: []
       indices: 
       edges: []
@@ -235,10 +235,10 @@ TextureImporter:
       name: wolf_attack_7
       rect:
         serializedVersion: 2
-        x: 928
-        y: 38
-        width: 94
-        height: 48
+        x: 1856
+        y: 76
+        width: 188
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,7 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b9bcf3aeb64a3b4fa34e5e27ddff70e
+      spriteID: 12d3470f2412d4a4ba163af93aef8826
       vertices: []
       indices: 
       edges: []
@@ -254,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 43e4ec65226e4d5458d21d6804c45842
+    spriteID: 39b9cbd2ec492f84cb930eb5ff4b3a3a
     vertices: []
     indices: 
     edges: []
