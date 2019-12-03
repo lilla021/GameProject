@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/4_Forest_Final.unity
+=======
+- path: Assets/Scenes/3_SandTutorial.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
