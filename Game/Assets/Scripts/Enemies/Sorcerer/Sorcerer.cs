@@ -32,7 +32,7 @@ public class Sorcerer : Enemy
     float mArriveThreshold = 0.05f;
     bool follow;
     bool isAttack = false;
-    bool isDefend = false;
+    bool isDefend = true;
     bool isSummon;
 
     Vector2 direction;
@@ -144,7 +144,7 @@ public class Sorcerer : Enemy
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
         isGrounded = checkGrounded();
-        mAnimator.SetBool("isDefend", isDefend);
+        //mAnimator.SetBool("isDefend", isDefend);
         mAnimator.SetBool("isSummon", isSummon);
     }
 
@@ -154,7 +154,12 @@ public class Sorcerer : Enemy
     }
     void Defend()
     {
-        isDefend = direction.magnitude <= mDefRange;
+        if (isDefend == true)
+        {
+            mAnimator.Play("Shield");
+            Mdefense = 10f;
+        }
+        isDefend = false;
     }
 
     void OnDrawGizmosSelected()
@@ -163,6 +168,7 @@ public class Sorcerer : Enemy
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, mSummonRange);
         Gizmos.DrawWireSphere(transform.position, mAttackRange);
+        Gizmos.DrawWireSphere(transform.position, mDefRange);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

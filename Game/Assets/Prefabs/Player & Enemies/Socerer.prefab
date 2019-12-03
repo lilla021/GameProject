@@ -217,6 +217,7 @@ MonoBehaviour:
   Sword: {fileID: 7899200359970394623, guid: c6726598cf9084345811b82ece94f4aa, type: 3}
   Ghouls: {fileID: 5950404113623328749, guid: d07c26fac70432a42ae4f7705f4f0c37, type: 3}
   mAttackRange: 4.5
+  mDefRange: 7
   SwordCount: 0
   GhoulCount: 0
 --- !u!95 &8800221243614809455
