@@ -32,7 +32,7 @@ public class Sorcerer : Enemy
     float mArriveThreshold = 0.05f;
     bool follow;
     bool isAttack = false;
-    bool isDefend = false;
+    bool isDefend = true;
     bool isSummon;
 
     Vector2 direction;
@@ -55,12 +55,19 @@ public class Sorcerer : Enemy
         SS = GameObject.Find("SwordSkeleton(Clone)");
         G = GameObject.Find("Ghoul(Clone)");
         UpdateAnimator();
-        if (isGrounded) {
-            Summon();
-            CheckMinions();
-            IsInDream();
-            Defend();
-        }
+        //if (isGrounded && PlayerData.IsInDream == false)
+        //{
+
+        //}
+        //else if (isGrounded && PlayerData.IsInDream == true)
+        //{
+        NotInDream();
+        IsInDream();
+        //}
+
+        
+        
+        
         Death();
     }
 
@@ -109,7 +116,7 @@ public class Sorcerer : Enemy
 
     protected override void Move()
     {
-        
+        Debug.Log("Move");
         direction = player.transform.position - transform.position;
         follow = direction.magnitude <= mFollowRange;
         if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Death") && !mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
@@ -144,7 +151,7 @@ public class Sorcerer : Enemy
         mAnimator.SetBool("isRunning", follow);
         mAnimator.SetBool("isAttack", isAttack);
         isGrounded = checkGrounded();
-        mAnimator.SetBool("isDefend", isDefend);
+        //mAnimator.SetBool("isDefend", isDefend);
         mAnimator.SetBool("isSummon", isSummon);
     }
 
@@ -154,7 +161,12 @@ public class Sorcerer : Enemy
     }
     void Defend()
     {
-        isDefend = direction.magnitude <= mDefRange;
+        if(isDefend == true && Mdefense != 10f)
+        {
+            mAnimator.Play("Shield");
+            isDefend = false;
+        }
+        Mdefense = 10f;
     }
 
     void OnDrawGizmosSelected()
@@ -180,10 +192,21 @@ public class Sorcerer : Enemy
     {
         if (PlayerData.IsInDream == true)
         {
+            isSummon = false;
+            Mdefense = 5f;
             Move();
             Attack();
         }
+    }
 
+    void NotInDream()
+    {
+        if(PlayerData.IsInDream == false)
+        {
+            Summon();
+            CheckMinions();
+            Defend();
+        }
     }
 }
 
