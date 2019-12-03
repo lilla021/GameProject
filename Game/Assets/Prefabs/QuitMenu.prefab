@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3670514432624561329}
   - component: {fileID: 896133611993120980}
   m_Layer: 5
-  m_Name: QuiMenu
+  m_Name: QuitMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -541.2, y: -327.4}
+  m_AnchoredPosition: {x: 0.000015259, y: 0}
+  m_SizeDelta: {x: -988.1, y: -327.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3670514432624561329
 CanvasRenderer:
@@ -291,11 +291,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2641752786168328983}
     m_Modifications:
-    - target: {fileID: 171591941966627140, guid: 3379acb93cd0d6e4992b488f10934fc1,
-        type: 3}
-      propertyPath: m_Name
-      value: LevelManager
-      objectReference: {fileID: 0}
     - target: {fileID: 171591941966627138, guid: 3379acb93cd0d6e4992b488f10934fc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -350,6 +345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 171591941966627140, guid: 3379acb93cd0d6e4992b488f10934fc1,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3379acb93cd0d6e4992b488f10934fc1, type: 3}
