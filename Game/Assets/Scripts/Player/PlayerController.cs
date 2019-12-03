@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour {
     bool dead = false;
     [SerializeField]
     float hitTime;
+    float deathTimeout = 0;
 
     GroundCheck[] groundCheck;
     bool isGrounded = false;
@@ -77,6 +79,18 @@ public class PlayerController : MonoBehaviour {
             Inputs();
             DreamWorld();
             HandleLevelUp();
+        }else{
+            deathTimeout += Time.deltaTime;
+            // Debug.Log(deathTimeout);
+            if(deathTimeout > 1){
+                deathTimeout = 0f;
+                // Restart Scene
+                restartPlayerData();
+                Scene xscene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(xscene.name);
+                // Application.LoadLevel(0);
+                // SceneManager.LoadScene("1_MainMenu");
+            }
         }
     }
 
@@ -121,12 +135,32 @@ public class PlayerController : MonoBehaviour {
             if (isAttack)
             { swordAudioTrigger();}
         }
-        
+
     }
     void swordAudioTrigger()
     {
         AudioManager.PlayMusic("sword");
     }
+
+    
+    void restartPlayerData() {
+        PlayerData.CurrentHP = 100;
+        PlayerData.MaxHP = 100;
+        PlayerData.CurrentMana = 100;
+        PlayerData.MaxMana = 100;
+        PlayerData.CurrentXP = 0;
+        PlayerData.MaxXP = 100;
+        PlayerData.CurrentLevel = 1;
+        PlayerData.AttackStrength = 20;
+        PlayerData.SpellPower = 20;
+        PlayerData.DreamTimerMaxValue = 10f;
+        PlayerData.DreamTimerCurrentValue = 10f;
+        PlayerData.IsInDream = false;
+        PlayerData.IsInReverseGravity = false;
+        PlayerData.LevelUpPoints = 0;
+        PlayerData.IsCasting = false;
+    }
+
     //Dies when no more HP.
     void Death() {
         if (PlayerData.CurrentHP <= 0) {

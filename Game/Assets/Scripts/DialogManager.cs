@@ -34,6 +34,7 @@ public class DialogManager : MonoBehaviour
     public void StartDialog(Dialog dialog)
     {
         sentences.Clear();
+        player.GetComponent<PlayerController>().enabled = false;
         foreach (string sentence in dialog.sentences)
         {
             sentences.Enqueue(sentence);
@@ -72,6 +73,9 @@ public class DialogManager : MonoBehaviour
     void EndDialog()
     {
         dialogPanel.GetComponent<Animator>().SetBool("disappear", true);
+        
+
+        player.GetComponent<PlayerController>().enabled = true;
         player.GetComponent<Animator>().enabled = true;
     }
 }

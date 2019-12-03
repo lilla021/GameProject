@@ -48,74 +48,37 @@ public class AudioManager : MonoBehaviour
 
     // Use this for initialization
 
-    void Awake()
-
-    {
-
-        if (instance == null)
-
-        {
-
+    void Awake() {
+        if (instance == null) {
             instance = this;
-
-        }
-
-
-        else if (instance != this)
-
-        {
-
+        } else if (instance != this) {
             Destroy(gameObject);
-
         }
-
 
         DontDestroyOnLoad(gameObject);
 
-
-        foreach (var s in audioFiles)
-
-        {
-
+        foreach (var s in audioFiles) {
             s.source = gameObject.AddComponent<AudioSource>();
 
             s.source.clip = s.audioClip;
-
             s.source.volume = s.volume;
-
             s.source.loop = s.isLooping;
-
-            if (s.playOnAwake)
-
-            {
-
+            if (s.playOnAwake) {
                 s.source.Play();
-
             }
-
         }
-
     }
 
-    public static void PlayMusic(string name)
-
-    {
+    public static void PlayMusic(string name) {
         Debug.Log("In play music function!");
         AudioFile s = Array.Find(instance.audioFiles, AudioFile => AudioFile.audioName == name);
 
-        if (s == null)
+        if (s == null) {
 
-        {
-
-            Debug.LogError("Sound name" + name + "not found!");
-
+            Debug.LogError("Sound name " + name + " not found!");
             return;
 
-        }
-
-        else
-
-        {
+        } else {
             Debug.Log("play sound!");
             s.source.Play();
 

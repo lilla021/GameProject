@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Crab : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class Crab : MonoBehaviour
     Transform mCrab;
     public bool faceLeft;
     public bool faceRight;
+    public float plimit;
+
+    float xorg = 0f;
+    float yorg = 0f;
+    float xscale = 0f;
+    float yscale = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +27,12 @@ public class Crab : MonoBehaviour
         attack = 10;
         faceLeft = true;
         faceRight = false;
+        
+        xorg = transform.position.x;
+        yorg = transform.position.y;
+
+        xscale = transform.localScale.x;
+        yscale = transform.localScale.y;
     }
 
     // Update is called once per frame
@@ -31,21 +44,27 @@ public class Crab : MonoBehaviour
 
     private void CheckBounds()
     {
-
-        if (transform.position.x < 14)
-        {
-            transform.Translate(-Vector2.right * 2.0f * Time.deltaTime);
-            FaceDirection(-Vector2.right);
-            faceLeft = true;
-            faceRight = false;
-        }
-
-        if (transform.position.x > 8)
-        {
-            transform.Translate(Vector2.right * 2.0f * Time.deltaTime);
-            FaceDirection(Vector2.right);
+        // Debug.Log(transform.position.x);
+        
+        // transform.Translate(Vector2.right * 2.0f * Time.deltaTime);
+        if (faceLeft && transform.position.x < ( xorg - plimit ) ) {
             faceLeft = false;
             faceRight = true;
+            // FaceDirection(Vector2.right);
+        }
+
+        if (faceRight && transform.position.x > ( xorg + plimit )) {
+            faceLeft = true;
+            faceRight = false;
+            // FaceDirection(-Vector2.right);
+        }
+        if(faceLeft){
+            transform.Translate(-Vector2.right * 2.0f * Time.deltaTime);
+            transform.localScale = new Vector3(xscale, yscale, 1);
+        }
+        if(faceRight){
+            transform.Translate(Vector2.right * 2.0f * Time.deltaTime);
+            transform.localScale = new Vector3(-xscale, yscale, 1);
         }
     }
     private void FaceDirection(Vector2 direction)
@@ -56,8 +75,16 @@ public class Crab : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
-        {
+        
+        // Debug.Log(collision.GetComponent<Collider>().name);
+        if (collision.GetComponent<CapsuleCollider2D>() != null){
+            if (collision.GetComponent<CapsuleCollider2D>().name == "Sword") {
+                Destroy(gameObject);
+                SceneManager.LoadScene("4_Forest_Final");
+
+            }
+        }
+        if (collision.CompareTag("Player")) {
             PlayerController player = collision.GetComponent<PlayerController>();
             player.getHit(attack);
         }
