@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3670514432624561329}
   - component: {fileID: 896133611993120980}
   m_Layer: 5
-  m_Name: QuitMenu
+  m_Name: QuiMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015259, y: 0}
-  m_SizeDelta: {x: -988.1, y: -327.4}
+  m_AnchoredPosition: {x: 0.0000076294, y: 0}
+  m_SizeDelta: {x: -625.78, y: -327.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3670514432624561329
 CanvasRenderer:
