@@ -72,6 +72,7 @@ public class Nightmare : Enemy
     {
         if(HP <= 30)
         {
+            //mAnimator.Play("IdleFrenzy");
             mAnimator.SetTrigger("Stage2");
         }
         One = GameObject.Find("ShadowRaze1(Clone)");

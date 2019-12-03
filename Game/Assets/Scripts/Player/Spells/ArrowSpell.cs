@@ -11,9 +11,11 @@ public class ArrowSpell : Spell
     Camera cam;
     Vector2 direction;
 
+   
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("playAudio", 2);
         manaCost = 35;
         if (PlayerData.CurrentMana >= manaCost) PlayerData.CurrentMana -= manaCost;
         else {
@@ -30,6 +32,7 @@ public class ArrowSpell : Spell
     // Update is called once per frame
     void Update()
     {
+        
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Arrow")) {
             transform.right = direction;
             timer += Time.deltaTime;
@@ -46,5 +49,10 @@ public class ArrowSpell : Spell
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             Destroy(gameObject);
         }
+    }
+
+    void playAudio()
+    {
+        AudioManager.PlayMusic("arrow");
     }
 }
