@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Wall : Spell
 {
+    private void Awake()
+    {
+        AudioManager.PlayMusic("wall");
+    }
     // Start is called before the first frame update
     void Start()
     {

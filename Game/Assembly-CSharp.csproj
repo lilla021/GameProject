@@ -60,12 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AudioTriggerBackground.cs" />
     <Compile Include="Assets\Scripts\ActivateEnemySpawner.cs" />
     <Compile Include="Assets\Scripts\AudioFile.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BarManager.cs" />
     <Compile Include="Assets\Scripts\CameraClamp.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CaveMusic.cs" />
     <Compile Include="Assets\Scripts\DestroyMask.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
@@ -90,10 +92,12 @@
     <Compile Include="Assets\Scripts\Enemies\Sorcerer\SwordSkeleton.cs" />
     <Compile Include="Assets\Scripts\Enemies\Spearman.cs" />
     <Compile Include="Assets\Scripts\Enemies\Wolf.cs" />
+    <Compile Include="Assets\Scripts\ForestMusic.cs" />
     <Compile Include="Assets\Scripts\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LevelUpHandler.cs" />
     <Compile Include="Assets\Scripts\MainMenuCheatButtons.cs" />
+    <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
     <Compile Include="Assets\Scripts\MoveWithPlatform.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\Parallax.cs" />
@@ -110,6 +114,7 @@
     <Compile Include="Assets\Scripts\StatsMenuScript.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\TextTyper.cs" />
+    <Compile Include="Assets\Scripts\TutorialMusic.cs" />
     <None Include="Assets\Sprites\UI pixelart Assets 4\Read Me.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/prisc/Desktop/Final_Game/GameProject/Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

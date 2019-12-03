@@ -9,9 +9,15 @@ public class Tornado : Spell
     [SerializeField]
     float knockupForce;
 
+    private void Awake()
+    {
+        AudioManager.PlayMusic("tornado");
+        AudioManager.FadeOut("tornado", 8);
+    }
     // Start is called before the first frame update
     void Start()
     {
+        
         manaCost = 10;
         if (PlayerData.CurrentMana >= manaCost) PlayerData.CurrentMana -= manaCost;
         else {
