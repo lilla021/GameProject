@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour {
     SpriteRenderer playerSprite;
     bool isHit = false;
     float hitCounter = 0;
+    int dashCounter = 0;
     bool dead = false;
     [SerializeField]
     float hitTime;
@@ -119,7 +120,7 @@ public class PlayerController : MonoBehaviour {
                 }
 
                 //Dashing
-                if (isDashing && !isAttack) {
+                if (isDashing && !isAttack && dashCounter < 1) {
                     Dash();
                 }
             }
@@ -211,6 +212,7 @@ public class PlayerController : MonoBehaviour {
 
     //Dashes
     void Dash() {
+        dashCounter++;
         player.AddForce(Vector2.right * transform.localScale.x * dashForce, ForceMode2D.Impulse);
         player.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
@@ -294,6 +296,7 @@ public class PlayerController : MonoBehaviour {
     bool checkGrounded() {
         foreach (GroundCheck g in groundCheck) {
             if (g.CheckGrounded(0.35f, LayerMask.GetMask("Ground"), gameObject)) {
+                dashCounter = 0;
                 return true;
             }
         }
