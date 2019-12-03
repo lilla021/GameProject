@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/6_Cave.unity
+=======
+- path: Assets/Scenes/3_SandTutorial.unity
+>>>>>>> AddAudio
   isLoaded: 1
   isActive: 1

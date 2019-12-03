@@ -97,8 +97,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-
-    public void PlayMusic(string name)
+    public static void PlayMusic(string name)
 
     {
         Debug.Log("In play music function!");

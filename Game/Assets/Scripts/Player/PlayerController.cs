@@ -112,14 +112,21 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    
     //Attacks when the button is pressed and the player ins't dashing or attacking.
     void Attack() {
         if (!mAnimator.GetCurrentAnimatorStateInfo(0).IsName("Attack") && (Mathf.Abs(player.velocity.x) <= maxSpeed * Time.fixedDeltaTime + 1) && !PlayerData.IsCasting) {
             isAttack = Input.GetMouseButtonDown(0);
             mAnimator.SetBool("isAttack", isAttack);
+            if (isAttack)
+            { swordAudioTrigger();}
         }
+        
     }
-
+    void swordAudioTrigger()
+    {
+        AudioManager.PlayMusic("sword");
+    }
     //Dies when no more HP.
     void Death() {
         if (PlayerData.CurrentHP <= 0) {
