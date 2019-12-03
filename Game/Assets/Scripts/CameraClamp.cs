@@ -8,7 +8,7 @@ public class CameraClamp : MonoBehaviour
 
     private void Awake()
     {
-        AudioManager.PlayMusic("forest");  
+        AudioManager.PlayMusic("cave");  
     }
     void Start()
     {
