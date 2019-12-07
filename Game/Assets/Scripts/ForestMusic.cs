@@ -9,8 +9,8 @@ public class ForestMusic : MonoBehaviour
 
     private Vector3 offset;            //Private variable to store the offset distance between the player and camera
 
-    private void Awake()
-    {
+    private void Awake() {
+        AudioManager.StopAllMusic();
         AudioManager.PlayMusic("forest");
     }
     // Use this for initialization

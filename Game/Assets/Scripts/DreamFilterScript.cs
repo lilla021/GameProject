@@ -7,6 +7,7 @@ public class DreamFilterScript : MonoBehaviour
     public GameObject DreamFilter;
     public GameObject StatsMenu;
     public GameObject QuitMenu;
+    public GameObject DialogPanel;
     
     void Update()
     {
@@ -14,27 +15,16 @@ public class DreamFilterScript : MonoBehaviour
 
         if (Input.GetKeyDown("m"))
         {
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+            Time.timeScale = (Time.timeScale == 1) ? 0 : 1;
             StatsMenu.SetActive(!StatsMenu.activeSelf);
         }
-        if(Input.GetKeyDown("escape"))
-        {
-            if (Time.timeScale == 1)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
+        if(Input.GetKeyDown("escape")) {
+            Time.timeScale = (Time.timeScale == 1) ? 0 : 1;
             QuitMenu.SetActive(!QuitMenu.activeSelf);
+            DialogPanel.SetActive(false);
+            DialogPanel.SetActive(true);
+            // DialogPanel.transform.localScale = new Vector3(Time.timeScale, Time.timeScale, Time.timeScale);
+            // DialogPanel.SetActive(!DialogPanel.activeSelf);
         }
     }
 }

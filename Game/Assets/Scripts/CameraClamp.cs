@@ -6,9 +6,9 @@ public class CameraClamp : MonoBehaviour
 {
     private Vector2 window;
 
-    private void Awake()
-    {
-        AudioManager.PlayMusic("cave");  
+    private void Awake() {
+        AudioManager.StopAllMusic();
+        AudioManager.PlayMusic("cave");
     }
     void Start()
     {

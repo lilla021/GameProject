@@ -138,8 +138,7 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
-    void swordAudioTrigger()
-    {
+    void swordAudioTrigger() {
         AudioManager.PlayMusic("sword");
     }
 
@@ -317,6 +316,18 @@ public class PlayerController : MonoBehaviour {
         }
         if (collision.CompareTag("Enemy")) {
             player.constraints = RigidbodyConstraints2D.FreezeAll;
+
+            Vector3 dir =  collision.transform.position - transform.position;
+            player.AddForce(Vector3.up * 3 - dir * 1, ForceMode2D.Impulse);
+        }
+    }
+    
+    void OnCollisionEnter2D(Collision2D col) {
+        // Debug.Log(col.collider.tag);
+        if(col.collider.CompareTag("Enemy")){
+            getHit(1f);
+            Vector3 dir =  col.collider.transform.position - transform.position;
+            player.AddForce(Vector3.up * 3 - dir * 1, ForceMode2D.Impulse);
         }
     }
 }

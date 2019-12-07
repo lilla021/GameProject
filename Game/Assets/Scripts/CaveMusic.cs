@@ -8,8 +8,8 @@ public class CaveMusic : MonoBehaviour
 
 
     private Vector3 offset;            //Private variable to store the offset distance between the player and camera
-    private void Awake()
-    {
+    private void Awake() {
+        AudioManager.StopAllMusic();
         AudioManager.PlayMusic("cave");
     }
     // Use this for initialization
