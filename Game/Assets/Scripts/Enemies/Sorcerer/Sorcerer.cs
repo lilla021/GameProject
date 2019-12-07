@@ -93,11 +93,7 @@ public class Sorcerer : Enemy
                     Instantiate(Ghouls, transform.position + new Vector3(5, 0, 0), Quaternion.identity);
                     GhoulCount = 1;
                 }
-            }
-            else
-            {
-                isSummon = false;
-            }
+            }           
             transform.localScale = new Vector3(Mathf.Sign(direction.x), transform.localScale.y, 0);
         }
     }
@@ -203,6 +199,7 @@ public class Sorcerer : Enemy
     {
         if (PlayerData.IsInDream == false)
         {
+            isSummon = true;
             Summon();
             CheckMinions();
             Defend();
