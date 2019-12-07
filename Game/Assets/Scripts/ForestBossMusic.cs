@@ -6,12 +6,11 @@ public class ForestBossMusic : MonoBehaviour
 {
     private Vector2 window;
 
-    private void Awake()
-    {
+    private void Awake() {
+        AudioManager.StopAllMusic();
         AudioManager.PlayMusic("forest");
     }
-    void Start()
-    {
+    void Start() {
         window = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 

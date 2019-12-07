@@ -92,25 +92,25 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: cave
     audioClip: {fileID: 8300000, guid: c61e7cb92a6fb9d4f9329e196e501022, type: 3}
-    volume: 1
+    volume: 0
     source: {fileID: 0}
     isLooping: 1
-    playOnAwake: 0
+    playOnAwake: 1
   - audioName: forest
     audioClip: {fileID: 8300000, guid: 37d765ffe4b73174fa0bed46e4cbe610, type: 3}
-    volume: 1
+    volume: 0.3
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
   - audioName: tutorial
     audioClip: {fileID: 8300000, guid: 16c94bffcde1a3240be21f086cdec383, type: 3}
-    volume: 1
+    volume: 0.9
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0
   - audioName: mainMenu
     audioClip: {fileID: 8300000, guid: f7d1e13ddd4c85648b0383a0505ed486, type: 3}
-    volume: 1
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 0

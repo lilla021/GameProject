@@ -51,8 +51,7 @@ public class ArrowSpell : Spell
         }
     }
 
-    void playAudio()
-    {
+    void playAudio() {
         AudioManager.PlayMusic("arrow");
     }
 }

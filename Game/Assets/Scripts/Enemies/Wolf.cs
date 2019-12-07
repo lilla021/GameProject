@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wolf : Enemy
 {
-    public float speed = 2.0f;
+    public float speed = 1.0f;
     bool mWalk = true;
     bool mRun;
     bool mFollow;
@@ -24,6 +24,10 @@ public class Wolf : Enemy
     float CurPos;
     float attackRange = 1.75f;
 
+    bool finishedAttack = false;
+    float mFollowSpeedInit = 0f;
+    float speedTimeout = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,7 @@ public class Wolf : Enemy
         min = transform.position.x;
         max = transform.position.x + 5f;
         CurPos = transform.position.x;
+        mFollowSpeedInit = mFollowSpeed;
         HP = 60;
         attack = 5;
         xp = 5;
@@ -61,6 +66,20 @@ public class Wolf : Enemy
             mWalk = true;
         }
         
+        if(finishedAttack){
+            speedTimeout += Time.deltaTime;
+            mFollow = false;
+            mWalk = true;
+            speed = 0.3f;
+            mFollowSpeed = 0.3f;
+        }
+        if(speedTimeout > 2){
+            finishedAttack = false;
+            speedTimeout = 0;
+            speed = 1.0f;
+            mFollowSpeed = mFollowSpeedInit;
+        }
+
         UpdateAnimator();
         Move();
         Attack();
@@ -129,6 +148,15 @@ public class Wolf : Enemy
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             player.getHit(attack);
+            // mRigidbody.AddForce(Vector2.right * Random.Range(-3, 3), ForceMode2D.Impulse);
+            finishedAttack = true;
+            // Debug.Log("FINISHED ATTACK");
+        }
+    }
+    void OnCollisionEnter2D(Collision2D col) {
+        if(col.collider.CompareTag("Player")){
+            finishedAttack = true;
+            // Debug.Log("FINISHED ATTACK");
         }
     }
 }

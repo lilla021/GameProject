@@ -6,8 +6,8 @@ public class TutorialMusic : MonoBehaviour
 {
     private Vector2 window;
 
-    private void Awake()
-    {
+    private void Awake() {
+        AudioManager.StopAllMusic();
         AudioManager.PlayMusic("tutorial");
     }
     void Start()
