@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,10 +44,10 @@ MonoBehaviour:
     y: 30
     width: 1605
     height: 850
-  m_MinSize: {x: 683, y: 498}
-  m_MaxSize: {x: 14004, y: 14048}
+  m_MinSize: {x: 681, y: 498}
+  m_MaxSize: {x: 14002, y: 14048}
   vertical: 0
-  controlID: 147
+  controlID: 128
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 385
     height: 850
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -93,8 +93,8 @@ MonoBehaviour:
     y: 0
     width: 304
     height: 510
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 148
+  controlID: 13
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 149
+  controlID: 14
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,13 +265,13 @@ MonoBehaviour:
     height: 510
   m_MinSize: {x: 204, y: 224}
   m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,14 +342,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Charles-Antoine\Desktop\New folder (3)\GameProject\Game
+  m_LastProjectPath: C:\Users\Charles-Antoine\Desktop\New folder (5)\GameProject\Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 21}
     m_SelectedIDs: 3c230000
     m_LastClickedID: 9020
-    m_ExpandedIDs: 00000000340a0000b618000000ca9a3b
+    m_ExpandedIDs: 00000000340a0000b6180000ae1b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000340a0000b6180000
+    m_ExpandedIDs: 00000000340a0000b6180000ae1b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,23 +496,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 96180000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 78f3ffffd6fbffff
+      m_SelectedIDs: 126a0100
+      m_LastClickedID: 92690
+      m_ExpandedIDs: 06cafeff24cafeff30ccfeff3acffefff0d0feff24d6feff02d7feff06d7feff2cd7feff4ad7feffa6dafeffbeddfeff7cdffeffcee4feffc6e5feffcee5feffd6f6feff7afbfeff1a0affffe20bffffba10fffffc10ffff2613ffff881cffff1e23ffff3c2affff6e2bffff9e32fffff438ffffde3cffff503effff1c3fffff7241ffff7444ffff3248ffff5e4effff784fffff3c54ffff2c55ffff6e55ffffea56ffff1c58ffff985bffff225effff245effff1064ffffba66ffffd866ffff366affff506dffff0e6fffff6274ffff2475ffff2c75ffffdca8ffff32b5ffff82bcffff0cc8ffffc4caffffdaccffff2ed2ffff4cd5fffff8d7ffff1addffffaae0ffff6ce2ffff86e3ffffdee9ffff56edffff58edffff9cf3ffffbcf7fffffef7ffffd6fbfffff4ffffff604700001e4b0000e64f0000885300004c5d0000be95000060d0000088d00000aed10000cad2000030d500004ed5000070d600008ed60000f4d8000018d90000f0d9000066ec000076ec000038f1000056f100003a01010060010100ba200100bc200100e02a0100fe2b0100366a0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: AudioManager
+        m_OriginalName: AudioManager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -56548
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.060537, y: 1.3396399, z: -9.84883}
+    m_Target: {x: 575.3847, y: 336.71414, z: -8.679926}
     speed: 2
-    m_Value: {x: -5.060537, y: 1.3396399, z: -9.84883}
+    m_Value: {x: 575.3847, y: 336.71414, z: -8.679926}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -587,9 +587,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.457405
+    m_Target: 884.2576
     speed: 2
-    m_Value: 26.457405
+    m_Value: 884.2576
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -622,8 +622,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 374.39996
-    y: 72.436356
+    x: 0
+    y: 0
     width: 912
     height: 490
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -702,8 +702,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 3440
-    y: 743
-    width: 1457
-    height: 358
+    x: 70.6909
+    y: 582.98175
+    width: 1218
+    height: 320
   m_PersistentViewDataDictionary: {fileID: 0}
