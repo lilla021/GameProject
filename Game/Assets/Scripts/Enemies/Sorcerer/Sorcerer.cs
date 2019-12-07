@@ -43,7 +43,7 @@ public class Sorcerer : Enemy
         mAnimator = GetComponent<Animator>();
         mRigidbody = GetComponent<Rigidbody2D>();
         groundCheck = GetComponentsInChildren<GroundCheck>();
-        HP = 100;
+        HP = 250;
         attack = 20;
         xp = 25;
         weight = 25;
