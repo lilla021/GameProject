@@ -92,7 +92,7 @@ MonoBehaviour:
     playOnAwake: 0
   - audioName: cave
     audioClip: {fileID: 8300000, guid: c61e7cb92a6fb9d4f9329e196e501022, type: 3}
-    volume: 0
+    volume: 0.5
     source: {fileID: 0}
     isLooping: 1
     playOnAwake: 1
